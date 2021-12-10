@@ -15,3 +15,5 @@ Fernando Ojeda, tengo 38 años, vivo en Resistencia-Chaco, soy Policía retirado
 Mauricio Suarez, tengo 30 años, resido en Pcia. Roque Sáenz Peña-Chaco, Soy Analista en Sistemas y estudiante avanzado de la carrera de Ingeniería en Sistemas de Información en la UNCAus (Universidad Nacional del Chaco Austral - Sede Sáenz Peña). Trabajo como pasante en el área de sistemas de SECHEEP (Servicios Energeticos del Chaco Empresa del Estado Provincial).
 
 Giuliana Tomasin, tengo 26 años de edad y soy de Resistencia-Chaco. Soy Lic. en Psicología y actualmente me desempeño en una empresa callcenter “Konecta”.
+
+Enlace del tablero de trabajo: https://trello.com/b/ZZdohon4/grupo-10-digital-house
