@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de productos</title>
+</head>
+<body>
+    <header>
+        <div class="contenedor-header">
+            <img src="/img/logo.jpeg" alt="">
+            <p>TODO A PEDAL</p><input type="text" placeholder="">
+            <i class="fas fa-search"></i>
+        </div>
+        <nav class="navegador">
+            <ul>
+                <li><a href="#">EMPRESA</a></li>
+                <li><a href="#">PRODUCTOS</a></li>
+                <li><a href="#">CONTACTOS</a></li>
+                <li><a href="#">CARRITO</a></li>
+                <li><a href="#">REGISTRARSE</a></li>
+                <li><a href="#">INICIAR SESION</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="contenedor-carrito">
+        <div class="row">
+            <main id="items" class="col-sm-8 row">
+            </main>
+            <aside class="col-sm-4">
+                <h2>Carrito de compras</h2>
+                <ul id="carrito" class="list-group"></ul>
+                <hr>
+                <p class="text-right">Total: <span id="total"></span>&dollar;</p>
+                <button id="btnVaciar" class="btn btn-danger">Vaciar</button>
+            </aside>
+        </div>
+    </div>
+
+    <footer>
+        <div class="contenedor-footer">
+            <nav class="footer-nav">
+                <h2>NUESTRO SITIO</h2>
+                <ul>
+                    <li><a href="#">EMPRESA</a></li>
+                    <li><a href="#">PRODUCTOS</a></li>
+                    <li><a href="#">CONTACTOS</a></li>
+                    <li><a href="#">CARRITO</a></li>
+                    <li><a href="#">REGISTRARSE</a></li>
+                    <li><a href="#">INICIAR SESION</a></li>
+                </ul>
+            </nav>
+            <div class="footer-pagos">
+                <h2>MEDIOS DE PAGO</h2><br>
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa cc-mastercad"></i>
+                <i class="fab fa-cc-dinners-club"></i>
+                <i class="fab fa-cc-amex"></i>
+            </div>
+            <div class="footer-logo">
+                <img src="/img/logo.jpeg" alt="">
+                <p>Copyright Mila Marzi 2020 <br>
+                Todos los derechos reservados. </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
