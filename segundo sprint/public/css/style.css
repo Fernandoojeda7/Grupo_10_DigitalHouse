@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background: rgb(233, 129, 146);
+    
+}
+.logo-nombre{
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+}
+.logo-nombre input{
+    width: 37vw;
+    align-self: flex-start;
+    margin: 0 0 0 30px
+}
+.logo-nombre img{
+    width: 15%;
+    height: 55px;
+    border-radius: 8px;
+}
+.logo-nombre p{
+    font-size: 3vw;
+    text-align: center;
+    margin: 7px;
+    
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    margin: 0px 0px 2px 7px;
+    
+}
+header nav ul a{
+    text-decoration: none;
+    color: #222222;
+    font-size: 7px;
+    margin: 3px;
+}
+header nav ul i{
+    font-size: 7px;
+    padding: 0;
+    margin: 0;
+}
+.navegador{
+    display: flex;
+    justify-content: space-between;
+}
+.banner img{
+    width: 100vw;
+}
+h1{
+    font-size: 18px;
+}
+h2{
+    font-size: 18px;
+}
+h3{
+    font-size: 14px;
+}
+h4{
+    font-size: 12px;
+}
+.contenedor img{
+    width: 100vw;
+}
+h5{
+    font-size: 10px;
+    color: rgb(38, 0, 255);
+}
+footer{
+    background-color: black;
+    border-radius: 7px;
+}
+.footer-nav ul, a{
+    display: inline-block;
+    font-size: 8px;
+    text-decoration: none;
+    color: white;
+}
+.contenedor-footer h2{
+    color: white;
+    font-size: 10px;
+}
+.footer-pagos i{
+    color: white;
+}
+.footer-logo p{
+    color: white;
+    font-size: 9px;
+}
+.footer-logo img{
+    width: 45px;
+}
+.contenedor-footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+
+}
