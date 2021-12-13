@@ -8,6 +8,9 @@ header{
     background: rgb(233, 129, 146);
     
 }
+main {
+    background: rgb(60, 65, 52);
+}
 .logo-nombre{
     display: flex;
     margin: 5px;
@@ -16,7 +19,7 @@ header{
 .logo-nombre input{
     width: 37vw;
     align-self: flex-end;
-    margin: 0 0 0 30px
+    margin: 0 0 0 30px;
 }
 .logo-nombre i{
     align-self: flex-end;
@@ -33,13 +36,10 @@ header{
 nav ul{
     display: flex;
     list-style: none;
-    margin: 0px 0px 2px 7px;
-    
 }
 
 nav ul li{
     font-size: 16px;
-    margin: 0px 25px 4px 13px;
 }
 nav ul a{
     text-decoration: none;
@@ -61,15 +61,19 @@ header nav ul i{
 }
 h1{
     font-size: 18px;
+    color: #ffffff;
 }
 h2{
     font-size: 18px;
+    color: #ffffff;
 }
 h3{
     font-size: 14px;
+    color: #ffffff;
 }
 h4{
     font-size: 12px;
+    color: #ffffff;
 }
 .contenedor img{
     width: 10vw;
@@ -131,7 +135,6 @@ footer{
             display: flex;
             align-items: flex-end;
             justify-content: space-between;
-
         }
         .logo-texto-enlaces-celu ul{
             list-style: none;
@@ -147,6 +150,10 @@ footer{
         .logo-texto-enlaces-celu a{
             color: black;
         }
+        .contenedor img{
+            width: 50vw;
+            
+        }
         .contenedor-celular img{
             width: 15vw;
             padding: 10px;
@@ -161,7 +168,26 @@ footer{
             display: flex;
             justify-content: space-between;
         }
-        
+        main{
+            padding: 0px 0px 10px 0px;
+        }
+        footer{
+            padding: 10px;
+        }
+        .footer-nav{
+            line-height: 10px;
+        }
+        .footer-nav a{
+            color: #ffffff;
+        }
+        .footer-logo img{
+            width: 12vw;
+        }
+        .footer-logo p{
+            line-height: 15px;
+            margin: 0px 15px 0px 0px;
+            text-align: center;
+        }
 }
 @media (min-width: 481px){
     div#hamburguesa{
@@ -173,4 +199,67 @@ footer{
         .barra-lupa-celu{
             display: none;
         }
+        .logo-nombre input{
+            align-self: center;
+        }
+        .logo-nombre i{
+            align-self: center;
+        }
+        nav.navegador{
+            display: flex;
+            justify-content: space-between;
+        }
+        .navegador ul{
+            justify-content: space-around;
+        }
+        .navegador li{
+            padding: 0vw 3vw 0vw 2vw;
+        }
+        .navegador a{
+            font-size: 2vw;
+       }
+        .navegador i{
+            font-size: 2vw;
+        }
+        .contenedor-header p{
+            align-self: center;
+            font-size: 2vw;
+        }
+        .contenedor img{
+            width: 50vw;
+        }
+        main{
+            padding: 0px 0px 10px 0px;
+        }
+        footer{
+            padding: 10px;
+        }
+        .footer-nav{
+            line-height: 10px;
+        }
+        .footer-nav a{
+            color: #ffffff;
+        }
+        .footer-logo img{
+            width: 12vw;
+        }
+        .footer-logo p{
+            line-height: 15px;
+            margin: 0px 15px 0px 0px;
+            text-align: center;
+        }
+}
+@media (min-width: 769px){
+    .contenedor img{
+        width: 30vw;
+    }
+    .logo-nombre input{
+        height: 30px;
+    }
+    .navegador a{
+        font-size: 1vw;
+   }
+    .navegador i{
+        font-size: 1vw;
+    }
 }
