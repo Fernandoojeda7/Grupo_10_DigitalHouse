@@ -175,10 +175,11 @@ footer{
             padding: 10px;
         }
         .footer-nav{
-            line-height: 10px;
+            line-height: 12px;
         }
         .footer-nav a{
             color: #ffffff;
+            font-size: 9px;
         }
         .footer-logo img{
             width: 12vw;
@@ -207,7 +208,7 @@ footer{
         }
         nav.navegador{
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
         }
         .navegador ul{
             justify-content: space-around;
@@ -228,6 +229,9 @@ footer{
         .contenedor img{
             width: 50vw;
         }
+        .banner img{
+            width: 99vw;
+        }
         main{
             padding: 0px 0px 10px 0px;
         }
@@ -235,10 +239,11 @@ footer{
             padding: 10px;
         }
         .footer-nav{
-            line-height: 10px;
+            line-height: 12px;
         }
         .footer-nav a{
             color: #ffffff;
+            font-size: 54%;
         }
         .footer-logo img{
             width: 12vw;
@@ -253,13 +258,43 @@ footer{
     .contenedor img{
         width: 30vw;
     }
+    .banner img{
+        background: black;
+        width: 98vw;
+    }
     .logo-nombre input{
         height: 30px;
     }
-    .navegador a{
-        font-size: 1vw;
-   }
-    .navegador i{
-        font-size: 1vw;
+    .contenedor-footer{
+        justify-content: space-between;
+        padding: 10px 20px 0px 20px;
+    }
+    .footer-nav{
+        line-height: 30px;
+    }
+    .footer-nav a{
+        padding-left: 20px;
+        color: #ffffff;
+        font-size: 2vw;
+        
+    }
+    .footer-logo img{
+        width: 15vw;
+       
+    }
+    .footer-logo p{
+        font-size: 15px;
+        line-height: 20px;
+        margin: 0px 15px 0px 0px;
+        text-align: center;
+    }
+    .contenedor-footer h2{
+        font-size: 2vw;
+        text-align: center;
+        
+    }
+    .footer-pagos i{
+        padding: 25px 20px 0px 5px;
+        font-size: 2vw;
     }
 }
