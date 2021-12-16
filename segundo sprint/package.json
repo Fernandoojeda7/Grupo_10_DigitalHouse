@@ -1,8 +1,8 @@
 {
-  "name": "segundo-sprint",
+  "name": "registro.js",
   "version": "1.0.0",
-  "description": "Estructura Sitio \"Todo a Pedal\"",
-  "main": "app.js",
+  "description": "",
+  "main": "Registro.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,13 +10,10 @@
     "type": "git",
     "url": "git+https://github.com/Fernandoojeda7/Grupo_10_DigitalHouse.git"
   },
-  "author": "Grupo 10",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Fernandoojeda7/Grupo_10_DigitalHouse/issues"
   },
-  "homepage": "https://github.com/Fernandoojeda7/Grupo_10_DigitalHouse#readme",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+  "homepage": "https://github.com/Fernandoojeda7/Grupo_10_DigitalHouse#readme"
 }
