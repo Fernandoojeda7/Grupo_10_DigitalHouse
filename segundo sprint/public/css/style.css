@@ -104,6 +104,7 @@ footer{
     display: flex;
     justify-content: space-between;
     padding: 8px;
+<<<<<<< HEAD
 
 }
 
@@ -184,3 +185,451 @@ footer{
   .login-box a:hover {
     color: #fff;
   }
+=======
+}
+main h2{
+    margin: 0 0 5px 0;
+}
+.h4-h5{
+    display: flex;
+    align-items: center;
+    margin: 3px 0 0 5px;
+}
+.h4-h5 h4{
+    margin: 0 25px 0 0;
+}
+#carrito{
+    display: flex;
+    font-size: 25px;
+    opacity: 0;
+    justify-content: flex-end;
+    transition: all 0.5s;
+    }
+#carrito:hover{
+    background: rgb(233, 129, 146);
+    opacity: 1;
+}
+.boton-agregar-carrito:hover{
+    box-shadow: 3px 3px 3px 3px rgb(128, 125, 125);
+}
+.formulario-registro{
+    padding: 20px 15px;
+}
+.control-form{
+    margin-bottom: 10px;
+}
+.control-form label{
+    margin-bottom: 5px;
+    display: block;
+    color: #ffffff;
+}
+.control-input{
+    width: 65%;
+    padding: 8px;
+}
+.boton-form{
+    background-color: rgb(255, 0, 21);
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+.formulario-registro a{
+    margin: 0 114px;
+}
+.fondo-main{
+    background: url("../img/banner3.jpg");
+}
+@media (max-width: 480px){
+    div#hamburguesa {
+        max-width: 30px;
+        max-height: 30px;
+        padding: 2px 10px 2px 9px;
+        font-size:  14px;
+        border-radius: 8px;
+        color: #ffffff;
+        background-color: rgb(4, 4, 5);
+        text-align: center;
+        margin: auto;
+        margin-top: 10px;
+        }
+        .logo-nombre{
+            display: none;
+        }
+        .navegador{
+            display: none;
+        }
+        .logo-texto-enlaces-celu{
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+        .logo-texto-enlaces-celu ul{
+            list-style: none;
+            display: flex;
+            align-items: flex-end;
+            margin: 24px;
+        }
+        .logo-texto-enlaces-celu li{
+            margin: 0px 20px 0px 4px;
+            font-size: 22px;
+            color: black;
+        }
+        .logo-texto-enlaces-celu a{
+            color: black;
+        }
+        .contenedor img{
+            width: 75vw;
+        }
+        .contenedor-celular img{
+            width: 15vw;
+            padding: 10px;
+            border-radius: 2px;
+        }
+        .logo-texto-enlaces-celu p{
+            align-self: center;
+            padding: 6px 130px 0px 0px;
+        }
+        .barra-lupa-celu{
+            padding: 0px 43px 0px 8px;
+            display: flex;
+            justify-content: space-between;
+        }
+        main{
+            padding: 0 10px;
+        }
+        footer{
+            padding: 10px;
+        }
+        .footer-nav{
+            line-height: 12px;
+        }
+        .footer-nav a{
+            color: #ffffff;
+            font-size: 9px;
+        }
+        .footer-logo img{
+            width: 12vw;
+        }
+        .footer-logo p{
+            line-height: 15px;
+            margin: 0px 15px 0px 0px;
+            text-align: center;
+        }
+        .banner img{
+            width: 98vw;
+            margin: 0 0 10px 0;
+        }
+        .contenedor-producto img{
+            width: 50vw;
+            position: relative;
+            left: 25%;
+            padding: 10px;
+        }
+        .contenedor-producto h3,h4, h5{
+            text-align: center;
+        }.contenedor-producto h5{
+            color: #ffffff;
+            font-size: 8px;
+        }
+        .contenedor-producto h4{
+            color: bisque;
+            font-size: 16px;
+        }
+        .cant-prod{
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+        }
+        .cant-prod input{
+            max-width: 35px;
+        }
+        .boton-agregar-carrito{
+            padding: 20px 0;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .boton-agregar-carrito button{
+            padding: 8px;
+            border-radius: 5px;
+            color: #ffffff;
+            background: black;
+        }
+        article p{
+            color: #ffffff;
+            text-align: justify;
+            max-width: 81%;
+        }
+        
+}
+@media (min-width: 481px){
+    div#hamburguesa{
+        display: none;
+        }
+        .contenedor-celular{
+            display: none;
+        }
+        .barra-lupa-celu{
+            display: none;
+        }
+        .logo-nombre input{
+            align-self: center;
+        }
+        .logo-nombre i{
+            align-self: center;
+        }
+        nav.navegador{
+            display: flex;
+            justify-content: space-around;
+        }
+        .navegador ul{
+            justify-content: space-around;
+        }
+        .navegador li{
+            padding: 0vw 3vw 0vw 2vw;
+        }
+        .navegador a{
+            font-size: 2vw;
+        }
+        .navegador i{
+            font-size: 2vw;
+        }
+        .contenedor-header p{
+            align-self: center;
+            font-size: 2vw;
+        }
+        .banner img{
+            width: 98vw;
+            max-height: 38vw;
+        }
+        main{
+            padding: 0 10px;
+        }
+        footer{
+            padding: 10px;
+        }
+        .footer-nav{
+            line-height: 12px;
+        }
+        .footer-nav a{
+            color: #ffffff;
+            font-size: 54%;
+        }
+        .footer-nav a:hover{
+            box-shadow: 5px 5px 5px 5px rgb(128, 125, 125);
+        }
+        .footer-logo img{
+            width: 12vw;
+        }
+        .footer-logo p{
+            line-height: 15px;
+            margin: 0px 15px 0px 0px;
+            text-align: center;
+        }
+        .contenedor{
+            display: flex;
+            flex-direction: column;
+            max-width: 48%;
+        }
+        .contenedor img{
+            justify-content: center;
+            align-self: center;
+            width: 50%;
+        }
+        .contenedor-por-seccion{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                position: relative;
+        }
+        .nombre-precio-cod{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            align-self: center;
+            position: absolute;
+            right: -31vw;
+            top: 5vw;
+        }
+        .cantidad-boton{
+            display: flex;
+            align-items: flex-end;
+        }
+        .contenedor-producto{
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+        }
+        .contenedor-producto img{
+            width: 50vw;
+            padding: 10px;
+        }
+        .contenedor-producto h3,h4, h5{
+            text-align: center;
+        }.contenedor-producto h5{
+            color: #ffffff;
+            font-size: 8px;
+        }
+        .contenedor-producto h4{
+            color: bisque;
+            font-size: 18px;
+        }
+        .cant-prod{
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            right: 12vw;
+            top: 15vw;
+        }
+        .cant-prod input{
+            max-width: 35px;
+        }
+        .boton-agregar-carrito{
+            padding: 20px 0;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .boton-agregar-carrito button{
+            padding: 8px;
+            border-radius: 5px;
+            color: #ffffff;
+            background: black;
+        }
+        article p{
+            color: #ffffff;
+            text-align: justify;
+            max-width: 42%;
+            font-size: 20px;
+        }
+        
+}
+@media (min-width: 769px){
+    main{
+        padding: 0 10px;
+    }
+    .contenedor img{
+        width: 30vw;
+    }
+    .banner img{
+        background: black;
+        width: 98vw;
+    }
+    .logo-nombre input{
+        height: 30px;
+    }
+    .contenedor-footer{
+        justify-content: space-between;
+        padding: 10px 20px 0px 20px;
+    }
+    .footer-nav{
+        line-height: 30px;
+    }
+    .footer-nav a{
+        padding-left: 20px;
+        color: #ffffff;
+        font-size: 2vw;
+        
+    }
+    .footer-logo img{
+        width: 15vw;
+    }
+    .footer-logo p{
+        font-size: 15px;
+        line-height: 20px;
+        margin: 0px 15px 0px 0px;
+        text-align: center;
+    }
+    .contenedor-footer h2{
+        font-size: 2vw;
+        text-align: center;
+        
+    }
+    .footer-pagos i{
+        padding: 25px 20px 0px 5px;
+        font-size: 2vw;
+    }
+    .contenedor{
+        display: flex;
+        flex-direction: column;
+        max-width: 23%;
+    }
+    .contenedor img{
+        justify-content: center;
+        align-self: center;
+        width: 55%;
+    }
+    .contenedor-producto{
+        width: 30%;
+    }
+    .contenedor-por-seccion{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+    }
+    .contenedor-por-seccion{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        position: relative;
+}
+.nombre-precio-cod{
+    position: absolute;
+    left: 23rem;
+    top: 5vw;
+}
+.cantidad-boton{
+    display: flex;
+    align-items: flex-end;
+}
+.contenedor-producto{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+.contenedor-producto img{
+    width: 40vw;
+    padding: 10px;
+}
+.contenedor-producto h3,h4, h5{
+    text-align: center;
+}.contenedor-producto h5{
+    color: #ffffff;
+    font-size: 8px;
+}
+.contenedor-producto h4{
+    color: bisque;
+    font-size: 18px;
+}
+.cant-prod{
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 22vw;
+    top: 12vw;
+}
+.cant-prod input{
+    max-width: 35px;
+}
+.boton-agregar-carrito{
+    padding: 20px 0;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.boton-agregar-carrito button{
+    padding: 8px;
+    border-radius: 5px;
+    color: #ffffff;
+    background: black;
+}
+article p{
+    color: #ffffff;
+    text-align: justify;
+    max-width: 42%;
+    font-size: 20px;
+}
+
+}
+>>>>>>> 0fc2a5a (register y product)
