@@ -128,8 +128,6 @@ footer{
     display: flex;
     justify-content: space-between;
     padding: 8px;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 }
 
@@ -210,10 +208,7 @@ footer{
   .login-box a:hover {
     color: #fff;
   }
-=======
-=======
->>>>>>> 0fc2a5a66cf7621ffca3b9d45f0968fe23d74e3d
-}
+
 main h2{
     margin: 0 0 5px 0;
 }
@@ -659,4 +654,3 @@ article p{
 }
 
 }
->>>>>>> 0fc2a5a (register y product)
