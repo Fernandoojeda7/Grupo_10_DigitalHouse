@@ -47,7 +47,7 @@
             </nav>
         </div>
     </header>
-    <main>
+    <main class="main-producto">
          <div class="contenedor-por-seccion">
             <div class="contenedor-producto">
                 <img src="/img/niño4.jpg" alt="">
@@ -55,11 +55,19 @@
                     <h3>MTB r 26 niño</h3>
                     <H5>COD. ART. 0001</H5>
                     <h4>$ 50.000</h4>
+                    <div class="cant-prod1">
+                        <label>Cantidad</label>
+                        <input type="number" name="cantidad-producto" value="1" min="1" max="100" >
+                        <div class="boton-agregar-carrito1">
+                            <button type="submit" >AGREGAR AL CARRITO</button>
+                        </div>
+                    </div>
+
                 </div>                
             </div>
                 <div class="cantidad-boton">
                     <div class="cant-prod">
-                        <label>CANTIDAD</label>
+                        <label>Cantidad</label>
                         <input type="number" name="cantidad-producto" value="1" min="1" max="100" >
                     </div>
                     <div class="boton-agregar-carrito">
@@ -79,7 +87,7 @@
     <footer>
         <div class="contenedor-footer">
             <nav class="footer-nav">
-                <h2>NUESTRO SITIO</h2>
+                
                 <ul>
                         <li><a href="">Empresa</a></li>
                         <li><a href="/productDetail">Productos</a></li>

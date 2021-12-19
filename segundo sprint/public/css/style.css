@@ -50,7 +50,7 @@ nav ul a{
     text-decoration: none;
     color: #222222;
     font-size: 7px;
-    margin: 3px;
+    margin: 2px;
 }
 header nav ul i{
     font-size: 7px;
@@ -65,20 +65,20 @@ header nav ul i{
     width: 99vw;
 }
 h1{
-    font-size: 18px;
+    font-size: 16px;
     color: #ffffff;
     margin: 20px 0 0 0;
 }
 h2{
-    font-size: 18px;
+    font-size: 16px;
     color: #ffffff;
 }
 h3{
-    font-size: 14px;
+    font-size: 12px;
     color: #ffffff;
 }
 h4{
-    font-size: 18px;
+    font-size: 16px;
     color: #ffffff;
 
 }
@@ -95,9 +95,12 @@ footer{
 }
 .footer-nav ul, a{
     display: inline-block;
-    font-size: 8px;
+    font-size: 12px;
     text-decoration: none;
     color: white;
+}
+.footer-nav h2{
+    margin: 2px 20px
 }
 .contenedor{
     background: #ffffff;
@@ -261,6 +264,9 @@ main h2{
     background: url("../img/banner3.jpg");
 }
 @media (max-width: 480px){
+    .cant-prod1{
+        display: none;
+    }
     div#hamburguesa {
         max-width: 30px;
         max-height: 30px;
@@ -291,7 +297,7 @@ main h2{
             margin: 24px;
         }
         .logo-texto-enlaces-celu li{
-            margin: 0px 20px 0px 4px;
+            margin: 0px 14px 0px 4px;
             font-size: 22px;
             color: black;
         }
@@ -300,6 +306,12 @@ main h2{
         }
         .contenedor img{
             width: 75vw;
+        }
+        .contenedor h3{
+            font-size: 16px;
+        }
+        .contenedor h4{
+            text-align: left;
         }
         .contenedor-celular img{
             width: 15vw;
@@ -326,8 +338,9 @@ main h2{
         }
         .footer-nav a{
             color: #ffffff;
-            font-size: 9px;
+            font-size: 12px;
         }
+        
         .footer-logo img{
             width: 12vw;
         }
@@ -341,9 +354,9 @@ main h2{
             margin: 0 0 10px 0;
         }
         .contenedor-producto img{
-            width: 50vw;
+            width: 44vw;
             position: relative;
-            left: 25%;
+            left: 30%;
             padding: 10px;
         }
         .contenedor-producto h3,h4, h5{
@@ -386,6 +399,166 @@ main h2{
     div#hamburguesa{
         display: none;
         }
+    .cant-prod{
+        display: none;
+    }
+    .cant-prod label{
+        color: #ffffff;
+    }
+        .contenedor-celular{
+            display: none;
+        }
+        .barra-lupa-celu{
+            display: none;
+        }
+        .logo-nombre input{
+            align-self: center;
+        }
+        .logo-nombre i{
+            align-self: center;
+        }
+        nav.navegador{
+            display: flex;
+            justify-content: space-around;
+        }
+        .navegador ul{
+            justify-content: space-around;
+        }
+        .navegador li{
+            padding: 0vw 3vw 0vw 2vw;
+        }
+        .navegador a{
+            font-size: 2vw;
+        }
+        .navegador i{
+            font-size: 2vw;
+        }
+        .contenedor-header p{
+            align-self: center;
+            font-size: 2vw;
+        }
+        .banner img{
+            width: 98vw;
+            max-height: 38vw;
+        }
+        main{
+            padding: 0 10px;
+        }
+        footer{
+            padding: 10px;
+        }
+        .footer-nav{
+            line-height: 12px;
+        }
+        
+        .footer-nav a{
+            color: #ffffff;
+            font-size: 77%;
+        }
+        .footer-nav a:hover{
+            box-shadow: 5px 5px 5px 5px rgb(128, 125, 125);
+        }
+        .footer-logo img{
+            width: 12vw;
+        }
+        .footer-logo p{
+            line-height: 15px;
+            margin: 0px 15px 0px 0px;
+            text-align: center;
+        }
+        .contenedor{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            max-width: 48%;
+        }
+        .contenedor img{
+            justify-content: center;
+            align-self: center;
+            width: 50%;
+        }
+        .contenedor h3{
+            font-size: 16px;
+        }
+        .contenedor h4{
+            text-align: left;
+        }
+        .contenedor-por-seccion{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                position: relative;
+        }
+        .nombre-precio-cod{
+            padding: 30px;
+        }
+        .cant-prod1{
+            margin: 10px 0;
+        }
+        .cant-prod1 button{
+            margin: 10px 0;
+        }
+        .cant-prod1 label{
+            color: #ffffff;
+        }
+        .cant-prod1 input{
+            margin: 0 0 0 35px;
+        }
+        .cantidad-boton{
+            display: flex;
+            align-items: flex-end;
+        }
+        .contenedor-producto{
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+        }
+        .contenedor-producto img{
+            width: 50vw;
+            padding: 10px;
+        }
+        .contenedor-producto h3,h4, h5{
+            align-items:flex-end;
+            text-align: right;
+        }.contenedor-producto h5{
+            color: #ffffff;
+            font-size: 8px;
+        }
+        .contenedor-producto h4{
+            color: bisque;
+            font-size: 19px;
+        }
+        .cant-prod input{
+            max-width: 35px;
+        }
+        .boton-agregar-carrito{
+            display: none;
+        }
+        .boton-agregar-carrito1 button{
+            padding: 8px;
+            border-radius: 5px;
+            color: #ffffff;
+            background: black;
+            font-size: 12px;
+        }
+        article p{
+            color: #ffffff;
+            text-align: justify;
+            max-width: 42%;
+            font-size: 20px;
+        }
+        
+}
+@media (min-width: 769px){
+    div#hamburguesa{
+        display: none;
+        }
+    .cant-prod{
+        display: none;
+    }
+    .cant-prod label{
+        color: #ffffff;
+    }
         .contenedor-celular{
             display: none;
         }
@@ -433,10 +606,21 @@ main h2{
         }
         .footer-nav a{
             color: #ffffff;
-            font-size: 54%;
+            font-size: 2vw;
+            margin: 10px 0;
         }
+       .footer-nav h2{
+            font-size: 18px;
+       }
+       .footer-pagos h2{
+            font-size: 18px;
+       }
+       .footer-pagos i{
+           font-size: 18px;
+           margin: 0 10px;
+       }
         .footer-nav a:hover{
-            box-shadow: 5px 5px 5px 5px rgb(128, 125, 125);
+            box-shadow: 5px 5px 5px 5px rgb(145, 137, 137);
         }
         .footer-logo img{
             width: 12vw;
@@ -449,12 +633,21 @@ main h2{
         .contenedor{
             display: flex;
             flex-direction: column;
-            max-width: 48%;
+            max-width: 23%;
         }
         .contenedor img{
             justify-content: center;
             align-self: center;
             width: 50%;
+        }
+        .contenedor h3{
+            font-size: 15px;
+        }
+        .contenedor h4{
+            font-size: 20px;
+        }
+        .contenedor h5{
+            font-size: 10px;
         }
         .contenedor-por-seccion{
                 display: flex;
@@ -463,13 +656,19 @@ main h2{
                 position: relative;
         }
         .nombre-precio-cod{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            align-self: center;
-            position: absolute;
-            right: -31vw;
-            top: 5vw;
+            padding: 30px;
+        }
+        .cant-prod1{
+            margin: 10px 0;
+        }
+        .cant-prod1 button{
+            margin: 10px 0;
+        }
+        .cant-prod1 label{
+            color: #ffffff;
+        }
+        .cant-prod1 input{
+            margin: 0 0 0 35px;
         }
         .cantidad-boton{
             display: flex;
@@ -481,41 +680,37 @@ main h2{
             position: relative;
         }
         .contenedor-producto img{
-            width: 50vw;
-            padding: 10px;
+            width: 40vw;
+            padding: 20px 35px 0 0;
         }
         .contenedor-producto h3,h4, h5{
-            text-align: center;
-        }.contenedor-producto h5{
+            align-items:flex-end;
+            text-align: right;
+        }
+        .contenedor-producto h3{
             color: #ffffff;
-            font-size: 8px;
+            font-size: 18px;
+        }
+        .contenedor-producto h5{
+            color: #ffffff;
+            font-size: 12px;
         }
         .contenedor-producto h4{
             color: bisque;
-            font-size: 18px;
-        }
-        .cant-prod{
-            color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: absolute;
-            right: 12vw;
-            top: 15vw;
+            font-size: 22px;
         }
         .cant-prod input{
             max-width: 35px;
         }
         .boton-agregar-carrito{
-            padding: 20px 0;
-            display: flex;
-            flex-direction: row-reverse;
+            display: none;
         }
-        .boton-agregar-carrito button{
+        .boton-agregar-carrito1 button{
             padding: 8px;
             border-radius: 5px;
             color: #ffffff;
             background: black;
+            font-size: 12px;
         }
         article p{
             color: #ffffff;
@@ -523,134 +718,5 @@ main h2{
             max-width: 42%;
             font-size: 20px;
         }
-        
-}
-@media (min-width: 769px){
-    main{
-        padding: 0 10px;
     }
-    .contenedor img{
-        width: 30vw;
-    }
-    .banner img{
-        background: black;
-        width: 98vw;
-    }
-    .logo-nombre input{
-        height: 30px;
-    }
-    .contenedor-footer{
-        justify-content: space-between;
-        padding: 10px 20px 0px 20px;
-    }
-    .footer-nav{
-        line-height: 30px;
-    }
-    .footer-nav a{
-        padding-left: 20px;
-        color: #ffffff;
-        font-size: 2vw;
-        
-    }
-    .footer-logo img{
-        width: 15vw;
-    }
-    .footer-logo p{
-        font-size: 15px;
-        line-height: 20px;
-        margin: 0px 15px 0px 0px;
-        text-align: center;
-    }
-    .contenedor-footer h2{
-        font-size: 2vw;
-        text-align: center;
-        
-    }
-    .footer-pagos i{
-        padding: 25px 20px 0px 5px;
-        font-size: 2vw;
-    }
-    .contenedor{
-        display: flex;
-        flex-direction: column;
-        max-width: 23%;
-    }
-    .contenedor img{
-        justify-content: center;
-        align-self: center;
-        width: 55%;
-    }
-    .contenedor-producto{
-        width: 30%;
-    }
-    .contenedor-por-seccion{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-    }
-    .contenedor-por-seccion{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        position: relative;
-}
-.nombre-precio-cod{
-    position: absolute;
-    left: 23rem;
-    top: 5vw;
-}
-.cantidad-boton{
-    display: flex;
-    align-items: flex-end;
-}
-.contenedor-producto{
-    display: flex;
-    justify-content: space-around;
-    position: relative;
-}
-.contenedor-producto img{
-    width: 40vw;
-    padding: 10px;
-}
-.contenedor-producto h3,h4, h5{
-    text-align: center;
-}.contenedor-producto h5{
-    color: #ffffff;
-    font-size: 8px;
-}
-.contenedor-producto h4{
-    color: bisque;
-    font-size: 18px;
-}
-.cant-prod{
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    right: 22vw;
-    top: 12vw;
-}
-.cant-prod input{
-    max-width: 35px;
-}
-.boton-agregar-carrito{
-    padding: 20px 0;
-    display: flex;
-    flex-direction: row-reverse;
-}
-.boton-agregar-carrito button{
-    padding: 8px;
-    border-radius: 5px;
-    color: #ffffff;
-    background: black;
-}
-article p{
-    color: #ffffff;
-    text-align: justify;
-    max-width: 42%;
-    font-size: 20px;
-}
-
-}
 
