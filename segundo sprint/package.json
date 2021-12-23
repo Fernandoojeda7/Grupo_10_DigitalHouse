@@ -1,8 +1,13 @@
 {
-  "name": "registro.js",
+  "name": "app.js",
   "version": "1.0.0",
   "description": "",
-  "main": "Registro.js",
+  "main": "app.js",
+  "start": "node app.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
