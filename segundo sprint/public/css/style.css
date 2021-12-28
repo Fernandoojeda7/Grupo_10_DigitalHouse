@@ -3,18 +3,30 @@
     padding: 0; 
     box-sizing: border-box;
 }
-/* body{
-    background-image: url('../img/banner.png');
-    width: 100%;
-    height: 100%;
-} */
+.body-index{
+    background: url("../img/main.jpg");
+}
+
 header{
     font-family: 'Fjalla One', sans-serif;;
     background: rgb(233, 129, 146);
     
 }
+.main-index{
+    background: url("../img/main.jpg");
+}
 main {
     background: rgb(60, 65, 52);
+}
+.slidesjs-pagination{
+    display: none;
+}
+.slidesjs-container{
+    max-height: 35vw;
+}
+.banner a{
+    display: none;
+    opacity: 0;
 }
 .logo-nombre{
     display: flex;
@@ -92,7 +104,7 @@ h5{
 footer{
     background-color: black;
     border-radius: 7px;
-}
+} 
 .footer-nav ul, a{
     display: inline-block;
     font-size: 12px;
@@ -105,11 +117,13 @@ footer{
 .contenedor{
     background: #ffffff;
     padding: 10px 0px 0px 10px;
-    margin: 10px 8px 0px 0px;
+    margin: 10px 8px 25px 0px;
 }
 .contenedor:hover{
     box-shadow: 10px 10px 10px 10px rgb(128, 125, 125);
+    transform: scale(1.2);
 }
+
 .contenedor h3, h4{
     color: black;
 }
@@ -305,7 +319,11 @@ main h2{
             color: black;
         }
         .contenedor img{
-            width: 75vw;
+            width: 50vw;
+        }
+        .contenedor{
+            max-width: 75%;
+            margin: 25px 88px;
         }
         .contenedor h3{
             font-size: 16px;
@@ -330,6 +348,10 @@ main h2{
         main{
             padding: 0 10px;
         }
+        .main-index h1, h2{
+           color: #df9a34;
+           margin: 15px 0;
+        }
         footer{
             padding: 10px;
         }
@@ -350,7 +372,7 @@ main h2{
             text-align: center;
         }
         .banner img{
-            width: 98vw;
+            width: 100%;
             margin: 0 0 10px 0;
         }
         .contenedor-producto img{
@@ -437,12 +459,16 @@ main h2{
             font-size: 2vw;
         }
         .banner img{
-            width: 98vw;
+            width: 100%;
             max-height: 38vw;
         }
         main{
             padding: 0 10px;
         }
+        .main-index h1, h2{
+            color: #df9a34;
+            margin: 15px 0;
+         }
         footer{
             padding: 10px;
         }
@@ -469,7 +495,7 @@ main h2{
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-            max-width: 48%;
+            max-width: 40%;
         }
         .contenedor img{
             justify-content: center;
@@ -590,13 +616,18 @@ main h2{
             align-self: center;
             font-size: 2vw;
         }
-        .banner img{
-            width: 98vw;
+        .banner {
+            padding: 0%;
+            width: 100%;
             max-height: 38vw;
         }
         main{
-            padding: 0 10px;
+            padding: 0 5px;
         }
+        .main-index h1, h2{
+            color: #df9a34;
+            margin: 5px 0 22px 0;
+         }
         footer{
             padding: 10px;
         }
@@ -633,6 +664,7 @@ main h2{
             display: flex;
             flex-direction: column;
             max-width: 23%;
+            margin: 0 0 40px 0;
         }
         .contenedor img{
             justify-content: center;
