@@ -5,24 +5,26 @@ const app = express();
 const publicPath = path.resolve(__dirname, './public');
 
 app.use(express.static(publicPath));
-
+app.set('view engine', 'ejs');
 
 app.listen(3030, ()=> {
     console.log('El servidor esta funcionando en el puerto 3030')
 });
 
 app.get('/', (req, res)=> {
-    res.sendFile(path.resolve(__dirname, './view/index.html'));
+    res.render('index')
 });
+
 app.get('/login', (req, res)=> {
-    res.sendFile(path.resolve(__dirname, './view/login.html'));
+    res.render('login')
 });
+
 app.get('/productCart', (req, res)=> {
-    res.sendFile(path.resolve(__dirname, './view/productCart.html'));
+    res.render('productCart')
 });
 app.get('/productDetail', (req, res)=> {
-    res.sendFile(path.resolve(__dirname, './view/productDetail.html'));
+    res.render('productDetail')
 });
 app.get('/register', (req, res)=> {
-    res.sendFile(path.resolve(__dirname, './view/register.html'));
+    res.render('register')
 });
