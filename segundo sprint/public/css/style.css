@@ -208,6 +208,7 @@ main h2{
 }
 .form-carrito label{
     margin-bottom: 5px;
+    color: #ffffff;
 }
 .cant-carrito h2{
     text-align: center;
@@ -218,7 +219,11 @@ main h2{
 }
 .carrito-envio label{
     display: block;
-    margin: 10px 0;
+    margin: 10px 5px;
+    color: #ffffff;
+}
+.carrito-envio input{
+    margin: 0 10px 0 0;
 }
 .body-login{
     background: url("../img/logo.jpeg");
@@ -773,7 +778,7 @@ main h2{
         }
         .contenedor-producto h3,h4, h5{
             align-items:flex-end;
-            text-align: right;
+            text-align: center;
         }
         .contenedor-producto h3{
             color: #ffffff;

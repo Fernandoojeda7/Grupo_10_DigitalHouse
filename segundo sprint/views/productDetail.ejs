@@ -1,53 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://fonts.google.com/">
-    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lobster&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fontawesome.com/v5.15/icons?d=gallery&p=2&m=free">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <title>DETALLE DEL PRODUCTO</title>
-</head>
+    <%- include('./partials/head') %>
 <body>
-    <header>
-        <div class="contenedor-header">
-            <div class="logo-nombre">                
-                <img src="/img/logo.jpeg" alt="">
-                <p>TODO A PEDAL</p> <input type="text" placeholder="">
-                <i class="fas fa-search"></i>
-            </div>
-
-                <div class="contenedor-celular">
-                        <div class="logo-texto-enlaces-celu">
-                        <img src="/img/logo.jpeg" alt="">
-                        <p>TODO A PEDAL</p> 
-                            <ul>
-                                <li><a href=""></a><i class="fas fa-shopping-cart"></i></li>
-                                <li><div id="hamburguesa"><i class="fas fa-bars"></i></div></li>
-                            </ul>
-                        </div>
-                    
-                <div class="barra-lupa-celu">
-                    <input type="text" placeholder="">
-                    <i class="fas fa-search"></i>
-                </div>
-            </div>
-            <nav class="navegador">
-                <ul>
-                    <li><a href="">EMPRESA</a></li>
-                    <li><a href="/productDetail">PRODUCTOS</a></li>
-                    <li><a href="">CONTACTOS</a></li>
-                    <li><a href="">CARRITO</a><i class="fas fa-shopping-cart"></i></li>
-                    <li><a href="">REGISTRARSE </a><i class="far fa-id-card"></i></li>
-                    <li><a href="">INICIAR SESION</a><i class="fas fa-sign-in-alt"></i></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main class="main-producto">
+    <%- include('./partials/header') %>
+     <main class="main-producto">
          <div class="contenedor-por-seccion">
             <div class="contenedor-producto">
                 <img src="/img/niño4.jpg" alt="">
@@ -84,31 +40,6 @@
                amet sequi quam dolores tempora! Quidem, in delectus.</p> <br>
         </article>
     </main>
-    <footer>
-        <div class="contenedor-footer">
-            <nav class="footer-nav">
-                
-                <ul>
-                        <li><a href="">Empresa</a></li><br>
-                        <li><a href="/productDetail">Productos</a></li><br>
-                        <li><a href="">Contactos</a></li>
-                        
-                </ul>
-            </nav>
-            <div class="footer-pagos">
-            <h2>MEDIOS DE PAGO</h2><br>
-            <i class="fab fa-cc-visa"></i>
-            <i class="fab fa-cc-mastercard"></i>
-            <i class="fab fa-cc-diners-club"></i>
-            <i class="fab fa-cc-amex"></i>
-            </div>
-            <div class="footer-logo">
-                <img src="/img/logo.jpeg" alt="">
-                <p>Copyright Mila Marzi 2020 <br>
-                Todos los derechos reservados. </p>
-            </div>
-
-        </div>
-    </footer>
+    <%- include('./partials/footer') %>
 </body>
 </html>
