@@ -3,9 +3,6 @@
     padding: 0; 
     box-sizing: border-box;
 }
-.body-index{
-    background: url("../img/main.jpg");
-}
 
 header{
     font-family: 'Fjalla One', sans-serif;;
@@ -16,6 +13,9 @@ header{
     background: url("../img/main.jpg");
 }
 main {
+    background: rgb(60, 65, 52);
+}
+.main-carrito {
     background: rgb(60, 65, 52);
 }
 .slidesjs-pagination{
@@ -146,85 +146,6 @@ footer{
     justify-content: space-between;
     padding: 8px;
 }
-
-.login-box {
-    width: 320px;
-    height: 420px;
-    background: #000;
-    color: #fff;
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    box-sizing: border-box;
-    padding: 70px 30px;
-  }
-
-  .login-box .avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    position: absolute;
-    top: -50px;
-    left: calc(50% - 50px);
-  }
-  
-  .login-box h1 {
-    margin: 0;
-    padding: 0 0 20px;
-    text-align: center;
-    font-size: 22px;
-  }
-  
-  .login-box label {
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
-    display: block;
-  }
-  
-  .login-box input {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  
-  .login-box input[type="text"], .login-box input[type="password"] {
-    border: none;
-    border-bottom: 1px solid #fff;
-    background: transparent;
-    outline: none;
-    height: 40px;
-    color: #fff;
-    font-size: 16px;
-  }
-  
-  .login-box input[type="submit"] {
-    border: none;
-    outline: none;
-    height: 40px;
-    background: #b80f22;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 20px;
-  }
-  
-  .login-box input[type="submit"]:hover {
-    cursor: pointer;
-    background: #ffc107;
-    color: #000;
-  }
-  
-  .login-box a {
-    text-decoration: none;
-    font-size: 12px;
-    line-height: 20px;
-    color: darkgrey;
-  }
-  
-  .login-box a:hover {
-    color: #fff;
-  }
-
 main h2{
     margin: 0 0 5px 0;
 }
@@ -253,6 +174,9 @@ main h2{
 .formulario-registro{
     padding: 20px 15px;
 }
+.formulario-registro button{
+    margin: 0 10px;
+}
 .control-form{
     margin-bottom: 10px;
 }
@@ -272,11 +196,66 @@ main h2{
     padding: 5px 10px;
 }
 .formulario-registro a{
-    margin: 0 114px;
+    margin: 0 60px;
 }
 .fondo-main{
     background: url("../img/banner3.jpg");
 }
+.form-carrito{
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.form-carrito label{
+    margin-bottom: 5px;
+}
+.cant-carrito h2{
+    text-align: center;
+    font-size: 20px;
+}
+.carrito-envio{
+    margin: 10px 0;
+}
+.carrito-envio label{
+    display: block;
+    margin: 10px 0;
+}
+.body-login{
+    background: url("../img/logo.jpeg");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedor-login{
+    width: 320px;
+    height: 150px;
+    position:relative;
+    top: 50vw;
+    text-align: center;
+}
+.form-login{
+    margin-bottom: 10px;
+}
+.form-login label{
+    margin-bottom: 5px;
+    display: block;
+    color: rgb(255, 0, 21);
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Fjalla One', sans-serif;
+   }
+.form-login input{
+    width: 100%;
+    padding: 8px;
+}
+.boton-form-login{
+    background-color: rgb(255, 0, 21);
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+
 @media (max-width: 480px){
     .cant-prod1{
         display: none;
@@ -415,7 +394,42 @@ main h2{
             text-align: justify;
             max-width: 81%;
         }
-        
+        .contenedor-carrito img{
+            width: 45vw;
+            position: relative;
+            left: 28%;
+            padding: 10px;
+        }
+        .contenedor-carrito h3,h4, h5{
+            text-align: center;
+
+        }.contenedor-carrito h5{
+            color: #ffffff;
+            font-size: 8px;
+        }
+        .contenedor-carrito h4{
+            color: #ffffff;
+        }
+        .cant-carrito{
+            color: #ffffff;
+            margin: 10px 0;
+        }
+        .boton-agregar-carrito22{
+            color: #ffffff;
+            margin: 10px 0px 0px 0px;
+        }
+        .boton-agregar-carrito22 button{
+            margin: 0 0 0 45px;
+            background-color: red;
+        }
+        .login-a {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        /* .repitiendo-cant-eliminar{
+            display: none;
+        }  */
 }
 @media (min-width: 481px){
     div#hamburguesa{
@@ -545,7 +559,7 @@ main h2{
         }
         .contenedor-producto h3,h4, h5{
             align-items:flex-end;
-            text-align: right;
+            text-align: center;
         }.contenedor-producto h5{
             color: #ffffff;
             font-size: 8px;
@@ -573,7 +587,54 @@ main h2{
             max-width: 42%;
             font-size: 20px;
         }
-        
+        .body-login{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contenedor-login{
+            width: 320px;
+            height: 150px;
+            position:relative;
+            top: 38vw;
+            text-align: center;
+        }
+        .login-a {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        .contenedor-carrito img{
+            width: 50vw;
+            position: relative;
+            left: 25%;
+            margin: 20px 0 0 0 ;
+        }
+        .contenedor-carrito h3,h4, h5{
+            text-align: center;
+
+        }.contenedor-carrito h5{
+            color: #ffffff;
+            font-size: 8px;
+        }
+        .contenedor-carrito h4{
+            color: #ffffff;
+        }
+        .cant-carrito{
+            color: #ffffff;
+            margin: 10px 0;
+        }
+        .boton-agregar-carrito22{
+            color: #ffffff;
+            margin: 10px 0px 0px 0px;
+        }
+        .boton-agregar-carrito22 button{
+            margin: 0 0 0 45px;
+            background-color: red;
+        }
+        /* .repitiendo-cant-eliminar{
+            display: none;
+        } */
 }
 @media (min-width: 769px){
     div#hamburguesa{
@@ -593,6 +654,7 @@ main h2{
         }
         .logo-nombre input{
             align-self: center;
+            height: 30px;
         }
         .logo-nombre i{
             align-self: center;
@@ -628,7 +690,7 @@ main h2{
         .main-index h1, h2{
             color: #df9a34;
             margin: 5px 0 22px 0;
-         }
+        }
         footer{
             padding: 10px;
         }
@@ -640,16 +702,16 @@ main h2{
             font-size: 2vw;
             margin: 10px 0;
         }
-       .footer-nav h2{
+        .footer-nav h2{
             font-size: 18px;
-       }
-       .footer-pagos h2{
+        }
+        .footer-pagos h2{
             font-size: 18px;
-       }
-       .footer-pagos i{
-           font-size: 18px;
-           margin: 0 10px;
-       }
+        }
+        .footer-pagos i{
+            font-size: 18px;
+            margin: 0 10px;
+        }
         .footer-nav a:hover{
             box-shadow: 5px 5px 5px 5px rgb(145, 137, 137);
         }
@@ -749,6 +811,72 @@ main h2{
             text-align: justify;
             max-width: 42%;
             font-size: 20px;
+        }
+        .body-login{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contenedor-login{
+            width: 320px;
+            height: 150px;
+            position:relative;
+            top: 20vw;
+            text-align: center;
+        }
+        .login-a {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        .formulario-registro button, a{
+            margin: 0 170px;
+        }
+        .contenedor-carrito img{
+            width: 35vw;
+            position: relative;
+            left: 30%;
+            margin: 20px 0 0 0 ;
+        }
+        .contenedor-carrito h3,h4, h5{
+            text-align: center;
+
+        }.contenedor-carrito h5{
+            color: #ffffff;
+            font-size: 8px;
+        }
+        .contenedor-carrito h4{
+            color: #ffffff;
+        }
+        .cant-carrito{
+            color: #ffffff;
+            margin: 10px 0;
+        }
+        .boton-agregar-carrito22{
+            color: #ffffff;
+            margin: 10px 0px 0px 0px;
+        }
+        .boton-agregar-carrito22 button{
+            margin: 0 0 0 45px;
+            background-color: red;
+        }
+        .form-carrito{
+            margin: 15px 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        .contenedor-carrito h2{
+            text-align: center;
+            font-size: 20px;
+        }
+        .nombre-precio-cod-carrito h3{
+            font-size: 20px;
+        }
+        .nombre-precio-cod-carrito h4{
+            font-size: 18px;
+        }
+        .nombre-precio-cod-carrito h5{
+            font-size: 12px;
         }
     }
 
