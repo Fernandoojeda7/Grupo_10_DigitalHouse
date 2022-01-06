@@ -248,7 +248,7 @@ main h2{
     width: 100%;
     padding: 8px;
 }
-.boton-form-login{
+.boton-form-login button{
     background-color: rgb(255, 0, 21);
     border-radius: 5px;
     font-size: 18px;
@@ -394,7 +394,6 @@ main h2{
             text-align: justify;
             max-width: 81%;
         }
-<<<<<<< HEAD
         .contenedor-carrito img{
             width: 45vw;
             position: relative;
@@ -428,13 +427,7 @@ main h2{
             justify-content: space-between;
             margin: 10px 0;
         }
-        /* .repitiendo-cant-eliminar{
-            display: none;
-        }  */
 }
-=======
-    }
->>>>>>> 6bf6b59286dc9fd3e176e6b7cda83c1299abcc44
 @media (min-width: 481px){
     div#hamburguesa{
         display: none;
@@ -487,7 +480,7 @@ main h2{
         .main-index h1, h2{
             color: #df9a34;
             margin: 15px 0;
-         }
+        }
         footer{
             padding: 10px;
         }
@@ -636,9 +629,6 @@ main h2{
             margin: 0 0 0 45px;
             background-color: red;
         }
-        /* .repitiendo-cant-eliminar{
-            display: none;
-        } */
 }
 @media (min-width: 769px){
     div#hamburguesa{
@@ -828,7 +818,7 @@ main h2{
             top: 20vw;
             text-align: center;
         }
-        .login-a {
+        .login-a a {
             display: flex;
             justify-content: space-between;
             margin: 10px 0;
@@ -883,12 +873,3 @@ main h2{
             font-size: 12px;
         }
     }
-
-
-.contenedor-header-carrito {
-    background-size: auto;
-    background-color: pink !important;
-    font-size: medium;
-    font-family: 'Fjalla One', sans-serif;
-    background: rgb(233, 129, 146);
-}
