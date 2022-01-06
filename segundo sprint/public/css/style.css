@@ -394,6 +394,7 @@ main h2{
             text-align: justify;
             max-width: 81%;
         }
+<<<<<<< HEAD
         .contenedor-carrito img{
             width: 45vw;
             position: relative;
@@ -431,6 +432,9 @@ main h2{
             display: none;
         }  */
 }
+=======
+    }
+>>>>>>> 6bf6b59286dc9fd3e176e6b7cda83c1299abcc44
 @media (min-width: 481px){
     div#hamburguesa{
         display: none;
@@ -880,3 +884,11 @@ main h2{
         }
     }
 
+
+.contenedor-header-carrito {
+    background-size: auto;
+    background-color: pink !important;
+    font-size: medium;
+    font-family: 'Fjalla One', sans-serif;
+    background: rgb(233, 129, 146);
+}
