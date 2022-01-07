@@ -20,6 +20,12 @@ app.get('/productDetail', (req, res)=> {
 app.get('/register', (req, res)=> {
     res.render('register');
 });
+app.get('/agregarProd', (req, res)=> {
+    res.render('agregarProd');
+});
+app.get('/editarProd', (req, res)=> {
+    res.render('editarProd');
+});
 
 app.listen(3030, ()=> {
     console.log('El servidor esta funcionando en el puerto 3030')

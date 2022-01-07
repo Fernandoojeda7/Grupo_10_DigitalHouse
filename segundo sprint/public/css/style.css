@@ -9,6 +9,9 @@ header{
     background: rgb(233, 129, 146);
     
 }
+.body-index{
+    background: url("../img/main.jpg");
+}
 .main-index{
     background: url("../img/main.jpg");
 }
@@ -77,12 +80,12 @@ header nav ul i{
     width: 99vw;
 }
 h1{
-    font-size: 16px;
+    font-size: 20px;
     color: #ffffff;
     margin: 20px 0 0 0;
 }
 h2{
-    font-size: 16px;
+    font-size: 19px;
     color: #ffffff;
 }
 h3{
@@ -259,7 +262,38 @@ main h2{
     font-size: 18px;
     padding: 5px 10px;
 }
-
+.body-agregarProd{
+    background: rgb(233, 129, 146);
+}
+.body-agregarProd h1{
+    color: black;
+    font-size: 30px;
+    font-family: 'Fjalla One', sans-serif;
+    margin: 20px 10px;
+}
+.form-agregarProd{
+    margin-bottom: 10px;
+}
+.form-agregarProd label{
+    margin-bottom: 5px;
+    display: block;
+    color: black;
+    font-size: 20px;
+    font-family: 'Fjalla One', sans-serif;
+   }
+.form-agregarProd input{
+    width: 20%;
+    padding: 8px;
+}
+.boton-agregarProd {
+    background-color: rgb(0, 204, 255);
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 5px 10px;
+}
+.contenedor-agregarProd{
+    margin: 0 10px;
+}
 
 @media (max-width: 480px){
     .cant-prod1{
@@ -431,6 +465,10 @@ main h2{
             display: flex;
             justify-content: space-between;
             margin: 10px 0;
+        }
+        .form-agregarProd input{
+            width: 70%;
+            padding: 8px;
         }
 }
 @media (min-width: 481px){
@@ -633,6 +671,10 @@ main h2{
         .boton-agregar-carrito22 button{
             margin: 0 0 0 45px;
             background-color: red;
+        }
+        .form-agregarProd input{
+            width: 70%;
+            padding: 8px;
         }
 }
 @media (min-width: 769px){
@@ -876,5 +918,15 @@ main h2{
         }
         .nombre-precio-cod-carrito h5{
             font-size: 12px;
+        }
+        .form-agregarProd input{
+            width: 40%;
+            padding: 8px;
+        }
+        .boton-agregarProd {
+            background-color: rgb(0, 204, 255);
+            border-radius: 5px;
+            font-size: 16px;
+            
         }
     }
