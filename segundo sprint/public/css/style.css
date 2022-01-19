@@ -228,6 +228,16 @@ main h2{
 .carrito-envio input{
     margin: 0 10px 0 0;
 }
+
+.form-carrito-boton button {
+    background-color: #222222;
+    color: #ffffff;
+    padding: 13px;
+    border-radius: 8px;
+}
+.form-carrito-boton a {
+    margin: 20px 0 20px 40%;
+}
 .body-login{
     background: url("../img/logo.jpeg");
     display: flex;
@@ -293,6 +303,9 @@ main h2{
 }
 .contenedor-agregarProd{
     margin: 0 10px;
+}
+.form-agregarProd textarea{
+    border: solid 2px #222222;
 }
 
 @media (max-width: 480px){

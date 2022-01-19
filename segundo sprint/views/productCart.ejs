@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head') %>
+    <%- include('./partials/head', {title: 'Carrito de Compras'}) %>
 
 <body class="main-carrito">
     <%- include('./partials/header') %>
@@ -32,7 +32,26 @@
                         <div class="carrito-envio">
                             <label>METODO DE ENVIO:</label>
                             <label><input type="radio" name="ENVIO" value="Sucursal">Retiro por Sucursal</label>
-                            <label><input type="radio" name="ENVIO" value="Domicilio">Envio a Domicilio</label>
+                        </div>
+                        <div class="carrito-envio">
+                            <label><input class="envio-solo" type="radio" name="ENVIO" value="Domicilio">Envio a Domicilio</label>
+                            <div id="carrito-envio-domicilio">
+                                <label>Provincia:</label>
+                                <select name="Provincia" >
+                                <option value="Chaco">Chaco</option>
+                                <option value="Corrientes">Corrientes</option>
+                                <option value="Misiones">Misiones</option>
+                                <option value="Formosa">Formosa</option>
+                                </select>                   
+                            </div>
+                            <div id="carrito-envio-domicilio">
+                                <label>Ciudad</label>
+                                <input type="text" name="Ciudad">
+                            </div>
+                            <div id="carrito-envio-domicilio">
+                                <label>Dirección</label>
+                                <input type="text" name="domicilio">
+                            </div>
                         </div>
                         <br>
                         <label>SUBTOTAL</label><br> 
@@ -52,11 +71,12 @@
                         <div class="form-carrito">
                             <label>TOTAL</label>
                             <input type="transaction-amount">
-                        </div>                        
+                        </div>
+                        <div class="form-carrito-boton">
+                            <a href=""><button type="submit">FINALIZAR COMPRA</button></a>
+                        </div>                       
                     </div>
-              
                         </form>
-
     </main>
     <%- include('./partials/footer') %>
 </body>
