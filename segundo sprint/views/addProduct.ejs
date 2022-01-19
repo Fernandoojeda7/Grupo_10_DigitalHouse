@@ -5,26 +5,42 @@
     <main class="body-agregarProd">
         <h1>FORMULARIO CARGA DE PRODUCTO</h1>
         <div class="contenedor-agregarProd">
-            <form action="">
+            <form action="/products" method="POST" enctype="multipart/form-data">
             <div class="form-agregarProd">
                 <label>Nombre del Producto</label>
-                <input type="text" name="nomnbre del producto">
+                <input type="text" name="name">
             </div>
             <div class="form-agregarProd">
-                <label>Código Artículo</label>
-                <input type="text" name="codigo del articulo">
+                <label>Descuento</label>
+                <input type="text" name="discount">
             </div>
             <div class="form-agregarProd">
                 <label>Precio</label>
-                <input type="number" name="precio">
+                <input type="number" name="price">
+            </div>
+            <div class="form-agregarProd">
+                <label>Categoría:</label>
+                <select name="category">
+                    <option value="Accesorio">Accesorios</option>
+                    <option value="Bicicleta">Bicicletas</option>
+                    <option value="Repuesto">Repuestos</option>
+                </select>
+            </div>
+            <div class="form-agregarProd">
+                <label>Tipo:</label>
+                <select name="type">
+                    <option value="promociones">Promociones</option>
+                    <option value="novedades">Novedades</option>
+                    <option value="ultimas-vistas">Ultimas vistas</option>
+                </select>
             </div>
             <div class="form-agregarProd">
                 <label>Descripción</label>
-                <textarea name="Descripción" id="" cols="30" rows="10"></textarea>
+                <textarea name="description" id="" cols="30" rows="10"></textarea>
             </div>
             <div class="form-agregarProd">
                 <label>Seleccionar Imagen</label>
-                <input type="file" name="foto" accept=".jpg, .png" class="control-input">
+                <input type="file" name="image" accept=".jpg, .png" class="control-input">
             </div>
             <button type="submit" class="boton-agregarProd">ENVIAR</button>
             <button type="reset" class="boton-agregarProd">BORRAR</button>            

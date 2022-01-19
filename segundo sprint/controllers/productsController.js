@@ -6,7 +6,6 @@ const productsFilePath = path.join(__dirname, '../data/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
-
 const controller = {
 	index: (req, res) => {
 		res.render('index', {products})
@@ -28,7 +27,7 @@ const controller = {
 		let newProduct= {
 			id: products[products.length - 1].id + 1,
 			...req.body,
-			image: req.file.fieldname
+			image: req.file.filename
 		}
 
 		products.push(newProduct)
