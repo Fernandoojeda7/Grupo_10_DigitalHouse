@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('./partials/head') %>
-<body>
+<body class="fondo-main">
     <%- include('./partials/header', {title: 'Registro de Usuarios'}) %>
     <main class="fondo-main">
-        <form action="http://localhost:3030/" method="post" class="formulario-registro">
+        <form action="/user/register" method="POST"  class="style-form">
             <div class="control-form">
                 <label for="nombre">Nombre y Apellido</label>
                 <input type="text" name="nombre" class="control-input" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{3,48}" title="Ingresa tu Nombre y Apellido completo" required/>
@@ -23,11 +23,11 @@
             </div>
            <div class="control-form">
                 <label>Contraseña</label>
-                <input type="password" name="contraseña" class="control-input" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                <input type="password" name="contraseña" class="control-input" required pattern=".{6,}">
             </div>
             <div class="control-form">
                 <label>Confirmar Contraseña</label>
-                <input type="password" name="confirmar-contraseña" class="control-input" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"> 
+                <input type="password" name="confirmarContraseña" class="control-input" required pattern=".{6,}"> 
             </div>
                 <a href=""><button type="submit" class="boton-form">REGISTRARSE</button></a>
         </form>

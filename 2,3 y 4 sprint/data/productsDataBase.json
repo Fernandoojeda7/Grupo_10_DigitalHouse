@@ -1,100 +1,112 @@
-[{
-    "id":1,
-    "name":"Asiento Yafee",
-    "description":"Diseño adaptativo, super acolchonados",
-    "price":2000,
-    "discount":12,
-    "category":"Accesorio",
-    "image":"Asiento_Yafee.jpg",
-    "type":"promociones"}, 
-
-    {
-        "id":2,
-        "name":"Asiento bicicleta",
-        "description":"Diseño adaptativo, super acolchonados",
-        "price":1500,
-        "discount": null,
-        "category":"Accesorio",
-        "image":"asiento.jpg",
-        "type":"ultimas-vistas"},
-    
-    {
-            "id":3,
-            "name":"Venzo Primal-Ex",
-            "description":"BICICLETA VENZO MODELO PRIMAL RODADO 29 CON FRENOS A DISCOS HIDRAULICOS DE 24 VELOCIDADES EQUIPAMIENTO SHIMANO A CONTINUACION DETALLADO",
-            "price":113.000,
-            "discount": null,
-            "category":"Bicicleta",
-            "image":"asiento.jpg",
-            "type":"novedades"},
-            
-    {
-            "id":4,
-            "name":"Casco ciclismo",
-            "description":"El diseño y las terminaciones son excelentes, cuenta con rueda de ajuste y almohadillas internas para mejor ajuste y conford",
-            "price":6899,
-            "discount": 25,
-            "category":"Accesorio",
-            "image":"casco2.jpg",
-            "type":"promociones"},
-     
-    {
-            "id":5,
-            "name":"Bicicleta Electrica",
-            "description": "Cuadro Acero, Rodado20', Carga Máxima 85 kg, Potencia de motor 200W",
-            "price":112.370,
-            "discount": null,
-            "category":"Bicicleta",
-            "image":"electrica.jpg",
-            "type":"novedades"},
-    
-    {
-            "id":6,
-            "name":"Gafas Ciclismo",
-            "description": "Gafas urbanas, modernas y sofisticadas",
-            "price":4999,
-            "discount": 24,
-            "category":"Accesorio",
-            "image":"gafas.jpg",
-            "type":"promociones"},
-
-    {
-            "id":7,
-            "name":"Cubierta R-29",
-            "description": "CUBIERTA LEVORIN ERUPTION 29 X 2.1 ( 56 - 622 ) MTB MEDIUM BLOCK TERRENOS MIXTOS",
-            "price":3.383,
-            "discount": null,
-            "category":"Repuesto",
-            "image":"cubierta.jpg",
-            "type":"ultimas-vistas"},
-            
-    {
-            "id":8,
-            "name":"Bicicleta p/Niñas",
-            "description": "Rodado 20. Playera. Cuenta con Guardabarros. Portapaquetes. Posee un Asiento Acolchado y Cierre para Subir el Asiento. Ideal para las consentidas de la casa.",
-            "price":24.000,
-            "discount": 23,
-            "category":"Bicicleta",
-            "image":"niña3.jpg",
-            "type":"ultimas-vistas"},
-
-    {
-            "id":9,
-            "name":"Porta Celulares (Bike)",
-            "description": "Universal para todas bicicletas, compatible con celulares de 4 a 6.5'",
-            "price":819,
-            "discount": 24,
-            "category":"Accesorio",
-            "image":"porta-celular.jpg",
-            "type":"novedades"},
-
-    {
-            "id":10,
-            "name":"Plato y Palanca",
-            "description": "Acero forjado. CoVEC. Dentado:40 dientes. 1/2´´x1/8´´x40T. Largo biela:165 mm.",
-            "price":2295.99,
-            "discount": null,
-            "category":"Repuesto",
-            "image":"plato_y_palanca_de_aluminio_para_eje.jpg",
-            "type":"ultimas-vistas"}
+[
+  {
+    "id": 1,
+    "name": "Asiento Yafee",
+    "description": "Diseño adaptativo, super acolchonados",
+    "price": 2000,
+    "discount": 12,
+    "category": "Accesorio",
+    "image": "Asiento_Yafee.jpg",
+    "type": "promociones"
+  },
+  {
+    "id": 2,
+    "name": "Asiento bicicleta",
+    "description": "Diseño adaptativo, super acolchonados",
+    "price": 1500,
+    "discount": null,
+    "category": "Accesorio",
+    "image": "asiento.jpg",
+    "type": "ultimas-vistas"
+  },
+  {
+    "id": 3,
+    "name": "Venzo Primal-Ex",
+    "description": "BICICLETA VENZO MODELO PRIMAL RODADO 29 CON FRENOS A DISCOS HIDRAULICOS DE 24 VELOCIDADES EQUIPAMIENTO SHIMANO A CONTINUACION DETALLADO",
+    "price": 113,
+    "discount": null,
+    "category": "Bicicleta",
+    "image": "asiento.jpg",
+    "type": "novedades"
+  },
+  {
+    "id": 4,
+    "name": "Casco ciclismo",
+    "description": "El diseño y las terminaciones son excelentes, cuenta con rueda de ajuste y almohadillas internas para mejor ajuste y conford",
+    "price": 6899,
+    "discount": 25,
+    "category": "Accesorio",
+    "image": "casco2.jpg",
+    "type": "promociones"
+  },
+  {
+    "id": 5,
+    "name": "Bicicleta Electrica",
+    "description": "Cuadro Acero, Rodado20', Carga Máxima 85 kg, Potencia de motor 200W",
+    "price": 112.37,
+    "discount": null,
+    "category": "Bicicleta",
+    "image": "electrica.jpg",
+    "type": "novedades"
+  },
+  {
+    "id": 6,
+    "name": "Gafas Ciclismo",
+    "description": "Gafas urbanas, modernas y sofisticadas",
+    "price": 4999,
+    "discount": 24,
+    "category": "Accesorio",
+    "image": "gafas.jpg",
+    "type": "promociones"
+  },
+  {
+    "id": 7,
+    "name": "Cubierta R-29",
+    "description": "CUBIERTA LEVORIN ERUPTION 29 X 2.1 ( 56 - 622 ) MTB MEDIUM BLOCK TERRENOS MIXTOS",
+    "price": 3.383,
+    "discount": null,
+    "category": "Repuesto",
+    "image": "cubierta.jpg",
+    "type": "ultimas-vistas"
+  },
+  {
+    "id": 8,
+    "name": "Bicicleta p/Niñas",
+    "description": "Rodado 20. Playera. Cuenta con Guardabarros. Portapaquetes. Posee un Asiento Acolchado y Cierre para Subir el Asiento. Ideal para las consentidas de la casa.",
+    "price": 24,
+    "discount": 23,
+    "category": "Bicicleta",
+    "image": "niña3.jpg",
+    "type": "ultimas-vistas"
+  },
+  {
+    "id": 9,
+    "name": "Porta Celulares (Bike)",
+    "description": "Universal para todas bicicletas, compatible con celulares de 4 a 6.5'",
+    "price": 819,
+    "discount": 24,
+    "category": "Accesorio",
+    "image": "porta-celular.jpg",
+    "type": "novedades"
+  },
+  {
+    "id": 10,
+    "name": "Plato y Palanca",
+    "description": "Acero forjado. CoVEC. Dentado:40 dientes. 1/2´´x1/8´´x40T. Largo biela:165 mm.",
+    "price": 2295.99,
+    "discount": null,
+    "category": "Repuesto",
+    "image": "plato_y_palanca_de_aluminio_para_eje.jpg",
+    "type": "ultimas-vistas"
+  },
+  {
+    "id": 11,
+    "name": "MTB r26 p/Niño",
+    "discount": "20",
+    "price": "40.000",
+    "category": "Bicicleta",
+    "type": "novedades",
+    "description": "Bicicleta todo terreno, rodado 26, cuadro de aluminio, 21 velocidades.",
+    "image": "1642803858509-niño4.jpg"
+  }
 ]
