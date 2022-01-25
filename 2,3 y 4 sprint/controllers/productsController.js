@@ -8,12 +8,15 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const controller = {
 	index: (req, res) => {
-		res.render('index', {products})
+		res.render('products', {products})
 	},
 
 	
 	productDetail: (req, res) => {
-		res.render('productDetail')
+		const idProduct = req.params.id;
+		const detailProduct = products.find(item => item.id == idProduct);
+		
+		res.render('productDetail', {detailProduct} )
 	},
 
 	
@@ -37,18 +40,27 @@ const controller = {
 		res.render('addProduct')
 	},
 
-	// Update - Form to edit
+
 	edit: (req, res) => {
-		res.render('editProduct')
-	},
-	// Update - Method to update
-	update: (req, res) => {
-		res.render('')
+		const idProduct = req.params.id;
+		const productEdit = products.find(item => item.id == idProduct);
+		console.log(productEdit);
+
+		res.render('editProduct', { productEdit });
+
+	
 	},
 
-	// Delete - Delete one product from DB
+	update: (req, res) => {
+		res.send('Viajo por Put')
+	},
+	
 	destroy : (req, res) => {
-		res.render('')
+		const numero = req.params.id;
+		const idProduct = numero - 1;
+		delete products[idProduct];
+		
+		res.send('Viajo por DELETE')
 	}
 };
 

@@ -30,11 +30,11 @@ router.get('/productDetail/:id', productsController.productDetail);
 
 
 router.get('/edit/:id', productsController.edit); 
-router.put('/:id', productsController.update); 
+router.put('/edit', productsController.update); 
 
 
 
-router.delete('/:id', productsController.destroy); 
+router.delete('/delete/:id', productsController.destroy); 
 
 
 module.exports = router;

@@ -4,13 +4,14 @@
 <body>
     <%- include('./partials/header') %>
      <main class="main-producto">
-         <div class="contenedor-por-seccion">
-            <div class="contenedor-producto">
-                <img src="/img/niño4.jpg" alt="">
+              <div class="contenedor-por-seccion">
+               <div class="contenedor-producto">
+                <img src="/img/<%= detailProduct.image %>" alt="">
                 <div class="nombre-precio-cod">
-                    <h3>MTB r 26 niño</h3>
-                    <H5>COD. ART. 0001</H5>
-                    <h4>$ 50.000</h4>
+                    <h3><%= detailProduct.name %> </h3>
+                    <H5>CODIGO  00<%= detailProduct.id %> </H5>
+                    <h4>$ <%= detailProduct.price %> ARS </h4>
+                    <H5><%= detailProduct.id%> % Off </H5>
                     <div class="cant-prod1">
                         <label>Cantidad</label>
                         <input type="number" name="cantidad-producto" value="1" min="1" max="100" >
@@ -34,11 +35,9 @@
             
         <h1>DESCRIPCIÓN</h1><br>
         <article>
-           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br>
-             Voluptatibus iure eaque odio omnis ex voluptates mollitia <br>
-              aperiam obcaecati, alias laudantium placeat commodi, <br>
-               amet sequi quam dolores tempora! Quidem, in delectus.</p> <br>
+           <p><%= detailProduct.description %> </p> <br>
         </article>
+           
     </main>
     <%- include('./partials/footer') %>
 </body>
