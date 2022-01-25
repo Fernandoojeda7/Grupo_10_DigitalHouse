@@ -1,0 +1,30 @@
+«<!DOCTYPE html>
+<html lang="es">
+
+<%- include('partials/head', {title: 'Todos los productos'}) %>
+<body class="main-index">
+    <%- include('partials/header') %> 
+    
+    <main class="main-index">
+        
+        <h1>TODOS LOS PRODUCTOS</h1><br>
+        <div class="contenedor-por-seccion">
+        <% products.forEach(product => { %>
+                 <div class="contenedor">
+                 <a href="/products//productDetail/<%= product.id %>"></a>
+                <img src="/img/<%= product.image %>"  alt="">
+                <h3><%= product.name %></h3>
+                <h4>$<%= product.price %> ARS</h4>
+                <h5><%= product.discount %> % off</h5>
+                <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+                <button style="background-color: red; font-size: 20px ;" type="submit">Delete</button>
+                </form>
+            </div>
+            <% }) %>
+        </div>
+    </main>
+    
+    <%- include('./partials/footer') %>
+
+</body>
+</html>
