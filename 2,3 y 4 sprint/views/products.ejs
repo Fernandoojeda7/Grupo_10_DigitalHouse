@@ -11,8 +11,7 @@
         <div class="contenedor-por-seccion">
         <% products.forEach(product => { %>
                  <div class="contenedor">
-                 <a href="/products//productDetail/<%= product.id %>"></a>
-                <img src="/img/<%= product.image %>"  alt="">
+                <a href="/products/productDetail/<%= product.id %>" id="contenedor"><img src="/img/<%= product.image %>"  alt=""></a>
                 <h3><%= product.name %></h3>
                 <h4>$<%= product.price %> ARS</h4>
                 <h5><%= product.discount %> % off</h5>

@@ -571,7 +571,7 @@ main h2{
         .contenedor img{
             justify-content: center;
             align-self: center;
-            width: 50%;
+            width: 90%;
         }
         .contenedor h3{
             font-size: 16px;
@@ -785,11 +785,13 @@ main h2{
             flex-direction: column;
             max-width: 23%;
             margin: 0 0 40px 0;
+            
         }
+        
         .contenedor img{
             justify-content: center;
             align-self: center;
-            width: 50%;
+            width: 80%;
         }
         .contenedor h3{
             font-size: 15px;
@@ -886,9 +888,7 @@ main h2{
             justify-content: space-between;
             margin: 10px 0;
         }
-        .formulario-registro button, a{
-            margin: 0 170px;
-        }
+        
         .contenedor-carrito img{
             width: 35vw;
             position: relative;

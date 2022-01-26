@@ -52,7 +52,7 @@ const controller = {
 	},
 
 	update: (req, res) => {
-		res.send('Viajo por Put')
+		res.send('El Producto se modifico')
 	},
 	
 	destroy : (req, res) => {
@@ -60,7 +60,7 @@ const controller = {
 		const idProduct = numero - 1;
 		delete products[idProduct];
 		
-		res.send('Viajo por DELETE')
+		res.send('El producto se ELIMINO')
 	}
 };
 
