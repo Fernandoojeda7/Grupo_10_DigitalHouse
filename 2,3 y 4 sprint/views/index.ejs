@@ -39,7 +39,7 @@
         <h2>Ultimas Vistas</h2>
         <div class="contenedor-por-seccion">
         <% products.forEach(product => { %>
-          <% if (product.type === 'ultimas-vistas') { %>
+          <% if (product.type == 'ultimas-vistas') { %>
             <div class="contenedor">
                 <a href="/products/productDetail/<%= product.id %>" id="contenedor"><img src="/img/<%= product.image %>"  alt=""></a>
                 <h3><%= product.name %></h3>
@@ -55,7 +55,7 @@
         <h1>NOVEDADES</h1>
         <div class="contenedor-por-seccion">
             <% products.forEach(product => { %>
-                <% if (product.type === 'novedades') { %>
+                <% if (product.type == 'novedades') { %>
                 <div class="contenedor">
                   <a href="/products/productDetail/<%= product.id %>" id="contenedor"><img src="/img/<%= product.image %>"  alt=""></a>
                     <h3><%= product.name %></h3>
@@ -70,7 +70,7 @@
         <h1>PROMOCIONES</h1>
         <div class="contenedor-por-seccion">
             <% products.forEach(product => { %>
-                <% if (product.type === 'promociones') { %>
+                <% if (product.type == 'promociones') { %>
                 <div class="contenedor">
                   <a href="/products/productDetail/<%= product.id %>" id="contenedor"><img src="/img/<%= product.image %>"  alt=""></a>
                     <h3><%= product.name %></h3>

@@ -44,24 +44,49 @@ const controller = {
 	edit: (req, res) => {
 		const idProduct = req.params.id;
 		const productEdit = products.find(item => item.id == idProduct);
-		console.log(productEdit);
-
+		
 		res.render('editProduct', { productEdit });
 
 	
 	},
 
 	update: (req, res) => {
-		res.send('El Producto se modifico')
+		const idProduct = req.params.id;
+		let productEdit = products.find(item => item.id == idProduct);
+				
+		productEdit = productAct = {
+				id: req.body.id,
+      			name: req.body.name,
+				description: req.body.description,
+				price: req.body.price,
+				discount: req.body.discount,
+				category: req.body.category,
+				image: req.body.image,
+				type: req.body.type
+			}
+		
+		// const jsonProduct = JSON.stringify(productNew);
+		// fs.writeFileSync(productsFilePath, jsonProduct, 'utf-8')
+		// console.log(productNew);
+		res.render('products', { products })
+
+
 	},
 	
 	destroy : (req, res) => {
-		const numero = req.params.id;
-		const idProduct = numero - 1;
-		delete products[idProduct];
-		
-		res.send('El producto se ELIMINO')
-	}
+	
+		const idProduct = req.params.id;
+		const productEdit = products.find(item => item.id == idProduct);
+
+	const product = products.filter(function(i) { return i !== productEdit });
+
+	const jsonProduct = JSON.stringify(product);
+	fs.writeFileSync(productsFilePath, jsonProduct, 'utf-8')
+		res.send('El producto se elimino correctamente')
+
+		}
+
+
 };
 
 module.exports = controller;
