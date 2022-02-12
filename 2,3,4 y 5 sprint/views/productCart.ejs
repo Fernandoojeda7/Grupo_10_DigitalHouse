@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head', {title: 'Carrito de Compras'}) %>
+
+<body class="main-carrito">
+    <%- include('./partials/header') %>
+    
+    <main class="main-carrito">
+        <form action="">
+            <div class="contenedor-por-seccion-carrito">
+            <div class="contenedor-carrito">
+                <img src="/img/products/niño4.jpg" alt="">
+                <div class="nombre-precio-cod-carrito">
+                    <h3>MTB r 26 niño</h3>
+                    <H5>COD. ART. 0001</H5>
+                    <h4>$ 50.000</h4> 
+                </div>
+                    <div class="cant-carrito">
+                        <label>Cantidad</label>
+                        <input type="number" name="cantidad-producto" value="1" min="1" max="100" >
+                     </div>
+                        <div class="boton-agregar-carrito22">
+                                                    
+                                <label>Eliminar</label><button type="reset" >X</button>
+                        </div>
+                      
+                        <h2>MEDIOS DE PAGOS</h2>
+                        <div class="form-carrito">
+                            <input type="text" name="cupon-descuento" placeholder="    CUPON DESCUENTO">
+                        </div>
+                        
+                        <div class="carrito-envio">
+                            <label>METODO DE ENVIO:</label>
+                            <label><input type="radio" name="ENVIO" value="Sucursal">Retiro por Sucursal</label>
+                        </div>
+                        <div class="carrito-envio">
+                            <label><input class="envio-solo" type="radio" name="ENVIO" value="Domicilio">Envio a Domicilio</label>
+                            <div id="carrito-envio-domicilio">
+                                <label>Provincia:</label>
+                                <select name="Provincia" >
+                                <option value="Chaco">Chaco</option>
+                                <option value="Corrientes">Corrientes</option>
+                                <option value="Misiones">Misiones</option>
+                                <option value="Formosa">Formosa</option>
+                                </select>                   
+                            </div>
+                            <div id="carrito-envio-domicilio">
+                                <label>Ciudad</label>
+                                <input type="text" name="Ciudad">
+                            </div>
+                            <div id="carrito-envio-domicilio">
+                                <label>Dirección</label>
+                                <input type="text" name="domicilio">
+                            </div>
+                        </div>
+                        <br>
+                        <label>SUBTOTAL</label><br> 
+                        <div class="form-carrito">
+                            
+                            <label>PRECIO</label>
+                            <input type="transaction-amount">
+                        </div>
+                        <div class="form-carrito">
+                            <label>ENVIO</label>
+                            <input type="transaction-amount">
+                        </div>
+                        <div class="form-carrito">
+                            <label>CUPON</label>
+                            <input type="transaction-amount">
+                        </div>
+                        <div class="form-carrito">
+                            <label>TOTAL</label>
+                            <input type="transaction-amount">
+                        </div>
+                        <div class="form-carrito-boton">
+                            <a href=""><button type="submit">FINALIZAR COMPRA</button></a>
+                        </div>                       
+                    </div>
+                        </form>
+    </main>
+    <%- include('./partials/footer') %>
+</body>
+</html>

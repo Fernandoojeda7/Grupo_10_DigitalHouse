@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "nombre": "Fernando Ojeda",
+    "documento": " 33245990",
+    "email": "fernandoroque2022@gmail.com",
+    "fecha": "1989-03-12",
+    "image": "perfil.png",
+    "contraseña": "ferojeda202"
+  },
+  {
+    "id": 2,
+    "nombre": "FRANCO MANUEL",
+    "documento": "32408105",
+    "email": "jazzchuchii@gmail.com",
+    "fecha": "2202-02-20",
+    "contraseña": "dcmmds"
+  },
+  {
+    "id": 3,
+    "nombre": "FERNANDO ROQUE",
+    "documento": "32408105",
+    "email": "jazzchuchii@gmail.com",
+    "fecha": "2022-02-24",
+    "contraseña": "xc<xc<zx"
+  },
+  {
+    "id": 4,
+    "nombre": "FRANCO MANUEL",
+    "documento": "32408105",
+    "email": "jazzchuchii@gmail.com",
+    "fecha": "2000-02-23",
+    "contraseña": "cvzvczxcv"
+  },
+  {
+    "id": 5,
+    "nombre": "Karina Paola",
+    "documento": "32408105",
+    "email": "noe352946@gmail.com",
+    "fecha": "2022-02-01",
+    "contraseña": "$2a$10$IVDRV5p06MQJaIDya6wI5.ol9C3eLCnoUUgZpKjit1VITKLFdZ3na"
+  }
+]
