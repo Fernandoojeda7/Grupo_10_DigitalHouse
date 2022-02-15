@@ -1,32 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lobster&display=swap" rel="stylesheet">
-    <title>LOGIN TODO A PEDAL</title>
-</head>
+<html >
+    <%- include('./partials/head', {title: 'LOGIN TODO A PEDAL'}) %>
+
 <body class="body-login">
-   <form action="">
+    
+   <form action="/user/login" method="POST">
        <div class="contenedor-login">
            <div class="form-login">
             <label for="email">INGRESE SU E-MAIL</label>
-            <input type="email" name="email" placeholder="                       Correo Electronico" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+            <input type="email" name="email" placeholder="                       Correo Electronico" >
            </div>
            <div class="form-login">
             <label for="contraseña">CONTREASEÑA</label>
-                <input type="password" name="contraseña" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                <input type="password" name="contraseña"  >
            </div>
            <div class="login-a">
-           <a href="">Olvidaste la contraseña</a>
-           <a href="">Quieres registrarte</a>
+            <input type="checkbox" name="recordame" value="Recordar">
+            <label style="color: white;">Recordame</label>
+            <a href="/user/register">Quieres registrarte</a>
             </div>
             <div class="boton-form-login">
                <button type="submit">INGRESAR</button>
             </div>
        </div>
    </form>
+   <br>
+   <br>
+   <br>
+   <br>
+   <% if (typeof errors != 'undefined') { %>
+    <p style="color: rgb(0, 195, 255); font-family: 'Fjalla One', sans-serif; font-size: 1.5vw;">ERROR</p>
+    <ul>
+        <% for( let i = 0; i < errors.length; i++) { %>
+        <li>
+            <%= errors[i].msg%>
+        </li>
+        <% } %>
+    </ul>
+<% } %>
 </body>
 </html>

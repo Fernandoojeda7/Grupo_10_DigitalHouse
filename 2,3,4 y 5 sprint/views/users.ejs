@@ -12,12 +12,12 @@
                 <i id="uni" class="fas fa-search"></i>
             </form>
             <div class="contenedor-user-login">
-                        <img src="/img/users/perfil.png"  alt=""  id="image" class="image">
+                        <a href="/user/usersDB"><img src="/img/users/<%= userALogin.image %>"  alt=""  id="image" class="image"></a>
                         <div id="contenedor-user-login">
-                            <h3>Bienvenido</h3><br>
-                            <h4>nombre y apellido <%= users.nombre %></h4>
-                            <h5>documento<%= users.documento %></h5>
-                            <h5>ID Usuario #<%= users.id %></h5>
+                            <h3>Bienvenido</h3>
+                            <h4><%= userALogin.nombre %></h4>
+                            <h5><%= userALogin.documento %></h5>
+                            <h5>Usuario #<%= userALogin.id %></h5>
                         </div>
             </div>
         </div>

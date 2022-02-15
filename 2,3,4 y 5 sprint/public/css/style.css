@@ -5,7 +5,7 @@
 }
 
 header{
-    font-family: 'Fjalla One', sans-serif;;
+    font-family: 'Fjalla One', sans-serif;
     background: rgb(233, 129, 146);
     
 }
@@ -541,10 +541,10 @@ main h2{
             background-color: red;
         }
         .login-a {
-            display: flex;
-            justify-content: space-between;
+            display: block;
             margin: 10px 0;
         }
+        
         .form-agregarProd input{
             width: 70%;
             padding: 8px;
@@ -719,8 +719,7 @@ main h2{
             text-align: center;
         }
         .login-a {
-            display: flex;
-            justify-content: space-between;
+            display: block;
             margin: 10px 0;
         }
         .contenedor-carrito img{
@@ -1008,9 +1007,8 @@ main h2{
             top: 20vw;
             text-align: center;
         }
-        .login-a a {
-            display: flex;
-            justify-content: space-between;
+        .login-a {
+            display: block;
             margin: 10px 0;
         }
         

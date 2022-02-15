@@ -7,11 +7,11 @@
         <form action="/user/register" method="POST"  class="style-form" enctype="multipart/form-data">
             <div class="control-form">
                 <label for="nombre">Nombre y Apellido</label>
-                <input type="text" name="nombre" class="control-input" pattern="{8, }" required/>
+                <input type="text" name="nombre" class="control-input" required/>
             </div>
             <div class="control-form">
                 <label for="documento">Documento Nº</label>
-                <input type="number" name="documento" class="control-input" pattern="[0-9]{8,}" title="Sin puntos ni comas" required/>
+                <input type="number" name="documento" class="control-input" title="Sin puntos ni comas" required/>
             </div>
             <div class="control-form">
                 <label for="email">Correo Electronico</label>
@@ -23,13 +23,12 @@
             </div>
             <div class="control-form">
                 <label>Imagen de Perfil</label>
-                <input type="file" name="image" accept=".jpg, .png" class="control-input"> 
+                <input type="file" name="image" accept=".jpg, .png" class="control-input" required> 
             </div> 
             <div class="control-form">
                 <label>Contraseña</label>
-                <input type="password" name="contraseña" class="control-input" required >
+                <input type="password" name="contraseña" class="control-input" required>
             </div>
-           
                 <a href=""><button type="submit" class="boton-form">REGISTRARSE</button></a>
         </form>
     </main>

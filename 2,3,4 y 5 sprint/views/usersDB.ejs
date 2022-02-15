@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('partials/head', {title: 'USUARIOS REGISTRADOS'}) %>
+<body class="main-index">
+    <%- include('partials/header') %> 
+    
+    <main class="main-index">
+        
+        <h1>TODOS LOS USUARIOS</h1><br>
+        <div class="contenedor-por-seccion">
+        <% users.forEach(user => { %>
+                 <div class="contenedor">
+                <img src="/img/users/<%= user.image %>"  alt="">
+                <h3><%= user.nombre %></h3>
+                <h3><%= user.documento %></h3>
+                <h3>Usuario #<%= user.id %></h3>
+                <h3><%= user.email %></h3>
+                <h3>Fecha Nacimiento: <%= user.fecha %></h3>               
+            </div>
+            <% }) %>
+        </div>
+    </main>
+
+</body>
+</html>
