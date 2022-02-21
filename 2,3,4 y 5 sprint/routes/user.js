@@ -37,11 +37,11 @@ const validatorLogin = [
 router.get('/login', userController.login);
 router.post('/login', validatorLogin, userController.processLogin);
 
-router.get('/register', userController.register);
+router.get('/register', guestMiddleware, userController.register);
 router.post('/register', upload.single('image'), userController.registered);
 
-router.get('/users', userController.users);
-router.get('/usersDB', userController.usersDB);
+router.get('/users', authMiddleware, userController.users);
+router.get('/usersDB', authMiddleware, userController.usersDB);
 
 
 module.exports = router;
