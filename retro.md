@@ -9,4 +9,9 @@ La naturaleza de la dinámica del grupo nos lleva a que las reuniones no se conc
 
 RETRO SPRINT 4
 
-Ya con un grupo mas consolidado y conociendo las fortalezas y debilidades de cada integrante el proyecto avanza con más fluidez, pudiendose concretar nuestras reuniones semanales, las cuales seguiremos desarrollandolas como venimos haciendo, se mejoro notablemente nuestra comunicación, quedando por mejorar o hacer el esfuerzo de realizar una reunión mas por semana, pero quedara en tratativa de realizarlo. 
+Ya con un grupo mas consolidado y conociendo las fortalezas y debilidades de cada integrante el proyecto avanza con más fluidez, pudiendose concretar nuestras reuniones semanales, las cuales seguiremos desarrollandolas como venimos haciendo, se mejoro notablemente nuestra comunicación, quedando por mejorar o hacer el esfuerzo de realizar una reunión mas por semana, pero quedara en tratativa de realizarlo.
+
+
+RETRO SPRINT 5
+
+Este no fue como los Sprint pasados, lamentablemente Giuliana no pudo continuar con el curso, por lo que tuvimos que volver a repensar la metodología de trabajo y repartirnos las tareas pendientes. Pudimos cumplir con los puntos solicitados con mucha dedicación. Seguir haciendo... seguir con la comunicación, y el mismo desempeño de hasta ahora. 
