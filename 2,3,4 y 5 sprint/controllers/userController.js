@@ -24,7 +24,7 @@ const controller = {
 			 } else {
 				 users = JSON.parse(usersJson)
 			 }
-			 var userALogin
+			 let userALogin
 			 for (let i = 0; i < users.length; i++) {
 				 if (users[i].email == req.body.email) {
 					 if (bcrypt.compareSync(req.body.contraseña, users[i].contraseña)) {
@@ -45,9 +45,10 @@ const controller = {
 			 if (req.body.recordame != undefined) {
 				res.cookie('recordame', userALogin.email, {maxAge: 20000 })
 			 }
-
-			 res.render('users', { userALogin, products })
+			 console.log(userALogin);
+			 res.render('users', { user: userALogin, products })
 		} else {
+
 			return res.render('login', {errors: errors.errors});
 		}
 	},
@@ -57,7 +58,8 @@ const controller = {
 	},
 
 	registered: (req, res) => {
-		console.log(req.file);
+		const errors = validationResult(req);
+		if (errors.isEmpty()){
 		let newUser= {
 			id: users[users.length - 1].id + 1,
 			...req.body,
@@ -70,10 +72,28 @@ const controller = {
 		const jsonUser = JSON.stringify(users);
 		fs.writeFileSync(usersFilePath, jsonUser, 'utf-8')
 		res.render('login');
+		} else {
+
+			return res.render('register', {errors: errors.errors, old: req.body});
+		}
 	},
 
 	users: (req, res) => {
-		res.render('users', { users, products })
+		let userALogin
+		for (let i = 0; i < users.length; i++) {
+			if (users[i].email == req.body.email) {
+				if (bcrypt.compareSync(req.body.contraseña, users[i].contraseña)) {
+					  userALogin = users[i];
+					break;
+				}
+			}
+		}
+		req.session.userLogin = userALogin;
+
+			 if (req.body.recordame != undefined) {
+				res.cookie('recordame', userALogin.email, {maxAge: 20000 })
+			 }
+		res.render('users', { user: userALogin, products })
 	},
 
 	usersDB: (req, res) => {
@@ -86,10 +106,3 @@ const controller = {
 
 module.exports = controller;
 
-// const newUser = { 
-// 	nombre: req.body.nombre, 
-// 	documento: req.body.documento, 
-// 	email: req.body.email, 
-// 	fecha: req.body.fecha, 
-// 	contraseña: req.body.contraseña, 
-// 	confirmarContraseña: req.body.confirmarContraseña };

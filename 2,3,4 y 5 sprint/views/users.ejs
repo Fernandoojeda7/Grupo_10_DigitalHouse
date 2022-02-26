@@ -7,17 +7,17 @@
         <div class="contenedor-user">
             <img src="/img/products/logo.jpeg" alt="">
             <p>TODO A PEDAL</p>
-            <form action="" class="lupa"> 
-                <input type="text" class="input">
-                <i id="uni" class="fas fa-search"></i>
+            <form action="/products/search" method="GET" class="lupa"> 
+                <input type="text" class="input" name="search">
+                <button type="submit"><i id="uni" class="fas fa-search"></i></button>
             </form>
             <div class="contenedor-user-login">
-                        <a id="image" href="/user/usersDB"><img src="/img/users/<%= userALogin.image %>"  alt=""  id="image" class="image"></a>
+                        <a id="image" href="/user/usersDB"><img src="/img/users/<%= user.image %>"  alt=""  id="image" class="image"></a>
                         <div id="contenedor-user-login">
                             <h3>Bienvenido</h3>
-                            <h4><%= userALogin.nombre %></h4>
-                            <h5><%= userALogin.documento %></h5>
-                            <h5>Usuario #<%= userALogin.id %></h5>
+                            <h4><%= user.nombre %></h4>
+                            <h5><%= user.documento %></h5>
+                            <h5>Usuario #<%= user.id %></h5>
                         </div>
             </div>
         </div>

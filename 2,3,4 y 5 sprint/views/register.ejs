@@ -4,22 +4,32 @@
 <body class="fondo-main">
     <%- include('./partials/header', {title: 'Registro de Usuarios'}) %>
     <main class="fondo-main">
+        <% if (typeof errors != 'undefined') { %>
+            <p style="color: rgb(14, 10, 10); font-family: 'Fjalla One', sans-serif; font-size: 1.5vw;">ERROR</p>
+            <ul>
+                <% for( let i = 0; i < errors.length; i++) { %>
+                <li>
+                    <%= errors[i].msg%>
+                </li>
+                <% } %>
+            </ul>
+        <% } %>
         <form action="/user/register" method="POST"  class="style-form" enctype="multipart/form-data">
             <div class="control-form">
                 <label for="nombre">Nombre y Apellido</label>
-                <input type="text" name="nombre" class="control-input" required/>
+                <input type="text" name="nombre" class="control-input" value="<%= locals.old && old.nombre ? old.nombre : ''%>" />
             </div>
             <div class="control-form">
                 <label for="documento">Documento Nº</label>
-                <input type="number" name="documento" class="control-input" title="Sin puntos ni comas" required/>
+                <input type="number" name="documento" class="control-input" value="<%= locals.old && old.documento ? old.documento : ''%>" />
             </div>
             <div class="control-form">
                 <label for="email">Correo Electronico</label>
-                <input type="email" name="email" placeholder="correo electronico"   class="control-input" required>
+                <input type="email" name="email" placeholder="correo electronico"   class="control-input" value="<%= locals.old && old.email ? old.email : ''%>" >
             </div>
             <div class="control-form">
                 <label for="fecha">Fecha de Nacimiento</label>
-                <input type="date" name="fecha" class="control-input" required>
+                <input type="date" name="fecha" class="control-input" value="<%= locals.old && old.fecha ? old.fecha : ''%>" >
             </div>
             <div class="control-form">
                 <label>Imagen de Perfil</label>
@@ -27,7 +37,7 @@
             </div> 
             <div class="control-form">
                 <label>Contraseña</label>
-                <input type="password" name="contraseña" class="control-input" required>
+                <input type="password" name="contraseña" class="control-input" >
             </div>
                 <a href=""><button type="submit" class="boton-form">REGISTRARSE</button></a>
         </form>

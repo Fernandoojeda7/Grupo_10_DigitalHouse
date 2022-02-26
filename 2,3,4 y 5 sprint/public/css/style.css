@@ -33,6 +33,7 @@ main {
 }
 .logo-nombre{
     display: flex;
+    align-items: center;
     margin: 5px;
     padding: 5px;
 }

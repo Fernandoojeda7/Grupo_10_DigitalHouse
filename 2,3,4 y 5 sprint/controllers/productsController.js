@@ -54,19 +54,20 @@ const controller = {
 		const idProduct = req.params.id;
 		let productEdit = products.find(item => item.id == idProduct);
 				
-		productEdit = productAct = {
+		productEdit= {
 				id: req.body.id,
-      			name: req.body.name,
+				name: req.body.name,
 				description: req.body.description,
 				price: req.body.price,
 				discount: req.body.discount,
 				category: req.body.category,
 				image: req.body.image,
 				type: req.body.type
-			}
+			}  
+			products.push(productEdit);
 		
-		// const jsonProduct = JSON.stringify(productNew);
-		// fs.writeFileSync(productsFilePath, jsonProduct, 'utf-8')
+		const jsonProduct = JSON.stringify(products);
+		fs.writeFileSync(productsFilePath, jsonProduct, 'utf-8')
 		// console.log(productNew);
 		res.render('products', { products })
 
@@ -84,7 +85,20 @@ const controller = {
 	fs.writeFileSync(productsFilePath, jsonProduct, 'utf-8')
 		res.send('El producto se elimino correctamente')
 
+		},
+	search: (req, res) =>{
+		let loQueBuscoElUsuario = req.query.search;
+		products
+		let productsResults = [];
+		for (let i = 0; i < products.length; i++){
+			if (products[i].name.includes(loQueBuscoElUsuario)){
+				productsResults.push(products[i]);
+			} else {
+				res.send('El Producto no se encontro')
+			}
 		}
+		res.render('productResult', { productsResults: productsResults })
+	}
 
 
 };

@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const multer = require('multer');
-const { body, check } = require('express-validator');
+const { check } = require('express-validator');
 const userController = require('../controllers/userController');
 
 const storage = multer.diskStorage({
@@ -18,27 +18,28 @@ const upload = multer({ storage })
 const authMiddleware = require('../middlewares/authMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 
+
 const validatorRegistered = [
-    body('nombre').notEmpty().withMessage('Obligatorio Nombre y Apellido'),
-    body('documento').notEmpty().withMessage('Obligatorio Numero DNI'),
-    body('email').isEmail().withMessage('Email debe ser valido'),
-    body('fecha').notEmpty().withMessage('Obligatorio Fecha Nacimiento'),
-    body('contraseña').notEmpty().withMessage('Introdusca una contraseña valida')
+    check('nombre').notEmpty().withMessage('Obligatorio Nombre y Apellido'),
+    check('documento').notEmpty().withMessage('Obligatorio Numero DNI'),
+    check('email').isEmail().withMessage('Email debe ser valido'),
+    check('fecha').notEmpty().withMessage('Obligatorio Fecha Nacimiento'),
+    check('contraseña').isLength({min: 4}).withMessage('Debe contener 4 caracteres')
 ];
 
 const validatorLogin = [
     check('email').isEmail().withMessage('Email invalido'),
-    check('contraseña').isLength({min: 4}).withMessage('Debe contener 4 caracteres')
+    check('contraseña').isLength({min: 4}).withMessage('')
 ];
 
 
 
 
 router.get('/login', userController.login);
-router.post('/login', validatorLogin, userController.processLogin);
+router.post('/users', validatorLogin, userController.processLogin);
 
 router.get('/register', guestMiddleware, userController.register);
-router.post('/register', upload.single('image'), userController.registered);
+router.post('/register', upload.single('image'), validatorRegistered, userController.registered);
 
 router.get('/users', authMiddleware, userController.users);
 router.get('/usersDB', authMiddleware, userController.usersDB);

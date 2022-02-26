@@ -2,8 +2,11 @@
     <div class="contenedor-header">
         <div class="logo-nombre">                
             <img src="/img/products/logo.jpeg" alt="">
-            <p>TODO A PEDAL</p> <input type="text" placeholder="">
-            <i class="fas fa-search"></i>
+            <p>TODO A PEDAL</p> 
+            <form action="/products/search" method="GET">
+                <input type="text" placeholder="¿ Qué estas buscando ?" name="search">
+                <button type="submit" style="background-color: black;"><i class="fas fa-search" style="color: blanchedalmond;"></i></button>
+            </form> 
         </div>
 
             <div class="contenedor-celular">
@@ -17,8 +20,10 @@
                     </div>
                 
             <div class="barra-lupa-celu">
-                <input type="text" placeholder="">
-                <i class="fas fa-search"></i>
+                <form action="/products/search" method="GET">                
+                <input type="text" placeholder=""name="search" >
+                <button type="submit" style="background-color: black;"><i class="fas fa-search" style="color: blanchedalmond;"></i></button>
+            </form>
             </div>
         </div>
         <nav class="navegador">
