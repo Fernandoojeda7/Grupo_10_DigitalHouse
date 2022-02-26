@@ -20,8 +20,10 @@ const guestMiddleware = require('../middlewares/guestMiddleware');
 
 
 const validatorRegistered = [
-    check('nombre').notEmpty().withMessage('Obligatorio Nombre y Apellido'),
+    check('nombre').notEmpty().withMessage('Obligatorio Nombre'),
+    check('apellido').notEmpty().withMessage('Obligatorio Apellido'),
     check('documento').notEmpty().withMessage('Obligatorio Numero DNI'),
+    check('direccion').notEmpty().withMessage('Obligatorio Dirección'),
     check('email').isEmail().withMessage('Email debe ser valido'),
     check('fecha').notEmpty().withMessage('Obligatorio Fecha Nacimiento'),
     check('contraseña').isLength({min: 4}).withMessage('Debe contener 4 caracteres')

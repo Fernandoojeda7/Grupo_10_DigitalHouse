@@ -16,12 +16,20 @@
         <% } %>
         <form action="/user/register" method="POST"  class="style-form" enctype="multipart/form-data">
             <div class="control-form">
-                <label for="nombre">Nombre y Apellido</label>
+                <label for="nombre">Nombre</label>
                 <input type="text" name="nombre" class="control-input" value="<%= locals.old && old.nombre ? old.nombre : ''%>" />
+            </div>
+            <div class="control-form">
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" class="control-input" value="<%= locals.old && old.apellido ? old.apellido : ''%>" />
             </div>
             <div class="control-form">
                 <label for="documento">Documento Nº</label>
                 <input type="number" name="documento" class="control-input" value="<%= locals.old && old.documento ? old.documento : ''%>" />
+            </div>
+            <div class="control-form">
+                <label for="direccion">Dirección</label>
+                <input type="text" name="direccion" class="control-input" value="<%= locals.old && old.direccion ? old.direccion : ''%>" />
             </div>
             <div class="control-form">
                 <label for="email">Correo Electronico</label>
