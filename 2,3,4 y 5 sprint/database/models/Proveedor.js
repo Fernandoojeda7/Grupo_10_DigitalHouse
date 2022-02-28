@@ -1,0 +1,60 @@
+module.exports = (sequelize, dataTypes) => {
+    let alias = "Proveedor";
+    let cols = {
+        id: {
+            type: dataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true
+        },
+        nombre: {
+            type: dataTypes.STRING,
+            allNull: false
+        },
+        apeliido: {
+            type: dataTypes.STRING,
+            allNull: false
+        },
+        documento: {
+            type: dataTypes.INTEGER,
+            allNull: false
+        },
+        direccion: {
+            type: dataTypes.STRING,
+            allNull: false
+        },
+        email: {
+            type: dataTypes.STRING,
+            allNull: false
+        },
+        
+        product_id: {
+            type: dataTypes.INTEGER,
+            allNull: false
+        }
+    };
+    let config = {
+        tableName: "proveedores",
+        timestamps: false
+    }
+
+
+    const Proveedor = sequelize.define(alias, cols, config);
+
+    Proveedor.associate = function (models) {
+        Proveedor.hasMany(models.Producto, { 
+            as: "producto",
+            foreignKey: "product_id"
+        })
+    
+    Proveedor.belongsToMany(models.Venta, { 
+        as: "ventas",
+        through: 'proveedor_venta',
+        foreignKey: 'id_proveedor',
+        otherKey: 'venta_id',
+        timestamps: false
+        })
+    }
+
+    return Proveedor;
+
+}

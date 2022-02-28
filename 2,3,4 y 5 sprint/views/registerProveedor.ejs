@@ -14,7 +14,7 @@
                 <% } %>
             </ul>
         <% } %>
-        <form action="/user/register" method="POST"  class="style-form" enctype="multipart/form-data">
+        <form action="/user/registerProveedor" method="POST"  class="style-form" >
             <div class="control-form">
                 <label for="nombre">Nombre</label>
                 <input type="text" name="nombre" class="control-input" value="<%= locals.old && old.nombre ? old.nombre : ''%>" />
@@ -35,14 +35,6 @@
                 <label for="email">Correo Electronico</label>
                 <input type="email" name="email" placeholder="correo electronico"   class="control-input" value="<%= locals.old && old.email ? old.email : ''%>" >
             </div>
-            <div class="control-form">
-                <label for="fecha">Fecha de Nacimiento</label>
-                <input type="date" name="fecha_nacimiento" class="control-input" value="<%= locals.old && old.fecha ? old.fecha : ''%>" >
-            </div>
-            <div class="control-form">
-                <label>Imagen de Perfil</label>
-                <input type="file" name="image" accept=".jpg, .png" class="control-input" required> 
-            </div> 
             <div class="control-form">
                 <label>Contraseña</label>
                 <input type="password" name="contraseña" class="control-input" >
