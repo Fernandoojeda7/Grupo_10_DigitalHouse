@@ -1,10 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const multer = require('multer');
+const { check } = require('express-validator');
 
 
 const productsController = require('../controllers/productsController');
 
+const authMiddleware = require('../middlewares/authMiddleware');
+const guestMiddleware = require('../middlewares/guestMiddleware');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -15,7 +18,15 @@ const storage = multer.diskStorage({
     }
   })
   
-const upload = multer({ storage })
+const upload = multer({ storage });
+
+const validatorRegistered = [
+    check('name').notEmpty().withMessage('Obligatorio Nombre'),
+    check('price').notEmpty().withMessage('Obligatorio Precio'),
+    check('category').notEmpty().withMessage('Obligatorio categoria'),
+    check('type').notEmpty().withMessage('Obligatorio un Tipo'),
+    check('description').notEmpty().withMessage('Debe tener una Descripción')
+];
 
 
 router.get('/', productsController.index);
@@ -23,8 +34,8 @@ router.get('/', productsController.index);
 router.get('/search', productsController.search) 
 
 
-router.get('/create', productsController.create); 
-router.post('/', upload.single('image'), productsController.store); 
+router.get('/create', authMiddleware, productsController.create); 
+router.post('/', upload.single('image'), validatorRegistered, productsController.store); 
 
 
 

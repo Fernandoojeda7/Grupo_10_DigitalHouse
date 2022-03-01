@@ -70,5 +70,16 @@
     "fecha": "2003-05-05",
     "contraseña": "$2a$10$lvsgAIsBlzUj5vzHwBSVlu4PWiV.ImEav/tVZirrDI6R4dq/dJnc.",
     "image": "1645827012460-sin-imagen.jpg"
+  },
+  {
+    "id": 9,
+    "nombre": "Mario",
+    "apellido": "Guañabes",
+    "documento": "6986798678",
+    "direccion": "Avenida Alberdi 270 Dpto. 11 A",
+    "email": "mario@hotmail.com",
+    "fecha_nacimiento": "2000-02-20",
+    "contraseña": "$2a$10$b2iE8TvzBiVS6lm7hJwXxeVgEWeK5f05HN/2Xv72UYSnnfOGTYr6e",
+    "image": "1646089401587-sin-imagen.jpg"
   }
 ]

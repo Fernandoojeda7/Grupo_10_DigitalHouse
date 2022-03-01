@@ -8,6 +8,8 @@ const methodOverride = require('method-override');
 const mainRouter = require('./routes/main');
 const productsRouter = require('./routes/products');
 const userRouter = require('./routes/user');
+const provRouter = require('./routes/proveedor');
+
 const logMiddleware = require('./middlewares/logMiddleware');
 const recordMiddleware = require('./middlewares/recordMiddleware');
 
@@ -31,6 +33,7 @@ app.use(recordMiddleware);
 app.use('/', mainRouter);
 app.use('/products', productsRouter);
 app.use('/user', userRouter);
+app.use('/proveedor', provRouter);
 
 
 

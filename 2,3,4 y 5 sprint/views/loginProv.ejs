@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html >
-    <%- include('./partials/head', {title: 'LOGIN TODO A PEDAL'}) %>
+    <%- include('./partials/head', {title: 'LOGIN PROVEEDOR'}) %>
 
 <body class="body-login">
     
-   <form action="/user/users" method="POST">
+   <form action="/proveedor/create" method="POST">
        <div class="contenedor-login">
            <div class="form-login">
             <label for="email">INGRESE SU E-MAIL</label>
@@ -17,7 +17,6 @@
            <div class="login-a">
             <input type="checkbox" name="recordame" value="Recordar">
             <label style="color: white;">Recordame</label>
-            <a href="/user/register">Quieres registrarte</a>
             </div>
             <div class="boton-form-login">
                <button type="submit">INGRESAR</button>

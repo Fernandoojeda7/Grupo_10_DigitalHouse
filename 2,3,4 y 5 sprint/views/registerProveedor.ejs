@@ -4,6 +4,7 @@
 <body class="fondo-main">
     <%- include('./partials/header', {title: 'Registro de Usuarios'}) %>
     <main class="fondo-main">
+        <a style="align-items: center;" href="/proveedor/loginProv"><button type="button" class="boton-form"> YA ESTOY REGISTRADO</button></a>
         <% if (typeof errors != 'undefined') { %>
             <p style="color: rgb(14, 10, 10); font-family: 'Fjalla One', sans-serif; font-size: 1.5vw;">ERROR</p>
             <ul>
@@ -14,7 +15,7 @@
                 <% } %>
             </ul>
         <% } %>
-        <form action="/user/registerProveedor" method="POST"  class="style-form" >
+        <form action="/proveedor/registerProveedor" method="POST"  class="style-form" >
             <div class="control-form">
                 <label for="nombre">Nombre</label>
                 <input type="text" name="nombre" class="control-input" value="<%= locals.old && old.nombre ? old.nombre : ''%>" />
@@ -41,6 +42,7 @@
             </div>
                 <a href=""><button type="submit" class="boton-form">REGISTRARSE</button></a>
         </form>
+       
     </main>
    
 </body>
