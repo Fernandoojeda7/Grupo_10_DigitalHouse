@@ -9,21 +9,19 @@
         
         <h1>TODOS LOS PRODUCTOS</h1><br>
         <div class="contenedor-por-seccion">
-        <% products.forEach(product => { %>
+        <% productos.forEach(producto => { %>
                  <div class="contenedor">
-                <a href="/products/productDetail/<%= product.id %>" id="contenedor"><img src="/img/products/<%= product.image %>"  alt=""></a>
-                <h3><%= product.name %></h3>
-                <h4>$<%= product.price %> ARS</h4>
-                <h5><%= product.discount %> % off</h5>
-                <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
-                <button style="background-color: red; font-size: 20px ;" type="submit">Delete</button>
+                <a href="/products/productDetail/<%= producto.id %>" id="contenedor"><img src="/img/products/<%= producto.image %>"  alt=""></a>
+                <h3><%= producto.name %></h3>
+                <h4>$<%= producto.price %> ARS</h4>
+                <h5><%= producto.discount %> % off</h5>
+                <form action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST">
+                <button style="background-color: red; font-size: 20px; margin-left: 15px;" type="submit">Eliminar</button>
                 </form>
+                <a href="/products/edit/<%= producto.id %>"><button style="background-color: green; font-size: 20px; margin: 5px 0; ">Editar</button></a>
             </div>
             <% }) %>
         </div>
     </main>
-    
-    <%- include('./partials/footer') %>
-
 </body>
 </html>

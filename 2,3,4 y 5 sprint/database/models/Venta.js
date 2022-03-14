@@ -4,32 +4,24 @@ module.exports = (sequelize, dataTypes) => {
         id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
+            allowNull: false,
             autoIncrement: true
         },
-        fecha_nacimiento: {
-            type: dataTypes.DATA,
-            allNull: false
+        fecha: {
+            type: dataTypes.DATE,
+            allowNull: false
         },
         monto: {
             type: dataTypes.INTEGER,
-            allNull: false
+            allowNull: false
         },
         forma_pago: {
             type: dataTypes.STRING,
-            allNull: false
-        },
-        id_usuario: {
-            type: dataTypes.INTEGER,
-            foreingKey: true,
-            references: {
-                model: Usuario,
-                key: "id"
-            },
-            allNull: false
+            allowNull: false
         },
         id_producto: {
             type: dataTypes.INTEGER,
-            allNull: false
+            allowNull: false
         }
     };
     let config = {
@@ -41,7 +33,7 @@ module.exports = (sequelize, dataTypes) => {
     const Venta = sequelize.define(alias, cols, config);
 
     Venta.associate = function (models) {
-        Venta.hasMany(models.Producto, { 
+        Venta.belongsTo(models.Producto, { 
         as: "producto",
         foreignKey: "id_producto"
         })

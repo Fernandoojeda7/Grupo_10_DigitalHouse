@@ -4,19 +4,20 @@ module.exports = (sequelize, dataTypes) => {
         id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
+            allowNull: false,
             autoIncrement: true
         },
         name: {
             type: dataTypes.STRING,
-            allNull: false
+            allowNull: false
         },
         discount: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.STRING,
             
         },
         price: {
             type: dataTypes.INTEGER,
-            allNull: false
+            allowNull: false
         },
         category: {
             type: dataTypes.STRING,
@@ -24,15 +25,16 @@ module.exports = (sequelize, dataTypes) => {
         },
         type: {
             type: dataTypes.STRING,
-            allNull: false
+            allowNull: false
         },
         image: {
             type: dataTypes.BLOB,
-            allNull: false
+            allowNull: false
         },
         description: {
             type: dataTypes.TEXT,
-            allNull: false}
+            allowNull: false
+        }
         
     };
     let config = {
@@ -44,21 +46,21 @@ module.exports = (sequelize, dataTypes) => {
     const Producto = sequelize.define(alias, cols, config);
 
     Producto.associate = function (models) {
-        Producto.belongsTo(models.Usuario, { 
+        Producto.hasMany(models.Usuario, { 
             as: "usuario",
             foreignKey: "producto_id"
         })
         
-        Producto.belongsTo(models.Venta, { 
+        Producto.hasMany(models.Venta, { 
             as: "venta",
             foreignKey: "id_producto"
             })
        
-        Producto.belongsTo(models.Proveedor, { 
+        Producto.hasMany(models.Proveedor, { 
         as: "proveedor",
         foreignKey: "product_id"
             })
         }
-    return Producto;
+    return Producto
 
 }

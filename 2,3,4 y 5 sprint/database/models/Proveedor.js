@@ -4,36 +4,37 @@ module.exports = (sequelize, dataTypes) => {
         id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
+            allowNull: false,
             autoIncrement: true
         },
         nombre: {
             type: dataTypes.STRING,
-            allNull: false
+            allowNull: false
         },
-        apeliido: {
+        apellido: {
             type: dataTypes.STRING,
-            allNull: false
+            allowNull: false
         },
         documento: {
             type: dataTypes.INTEGER,
-            allNull: false
+            allowNull: false
         },
         direccion: {
             type: dataTypes.STRING,
-            allNull: false
+            allowNull: false
         },
         email: {
             type: dataTypes.STRING,
-            allNull: false
+            allowNull: false
         },
         contraseña: {
             type: dataTypes.STRING,
-            allNull: false
+            allowNull: false
         },
         
         product_id: {
             type: dataTypes.INTEGER,
-            allNull: false
+            allowNull: false
         }
     };
     let config = {
@@ -45,7 +46,7 @@ module.exports = (sequelize, dataTypes) => {
     const Proveedor = sequelize.define(alias, cols, config);
 
     Proveedor.associate = function (models) {
-        Proveedor.hasMany(models.Producto, { 
+        Proveedor.belongsTo(models.Producto, { 
             as: "producto",
             foreignKey: "product_id"
         })

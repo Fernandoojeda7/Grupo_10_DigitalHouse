@@ -4,15 +4,16 @@ module.exports = (sequelize, dataTypes) => {
         id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
+            allowNull: false,
             autoIncrement: true
         },
         nombre: {
             type: dataTypes.STRING,
-            allNull: false
+            allowNull: false
         },
-        apeliido: {
+        apellido: {
             type: dataTypes.STRING,
-            allNull: false
+            allowNull: false
         },
         documento: {
             type: dataTypes.INTEGER,
@@ -20,32 +21,27 @@ module.exports = (sequelize, dataTypes) => {
         },
         direccion: {
             type: dataTypes.STRING,
-            allNull: false
+            allowNull: false
         },
         email: {
             type: dataTypes.STRING,
-            allNull: false
+            allowNull: false
         },
         fecha_nacimiento: {
-            type: dataTypes.DATA,
-            allNull: false
+            type: dataTypes.DATE,
+            allowNull: false,
         },
         image: {
             type: dataTypes.BLOB,
-            allNull: false
+            allowNull: false
         },
         contraseña: {
             type: dataTypes.STRING,
-            allNull: false
+            allowNull: false
         },
         producto_id: {
             type: dataTypes.INTEGER,
-            foreingKey: true,
-            references: {
-                model: Producto,
-                key: "id"
-            },
-            allNull: false
+            allowNull: false
         }
     };
     let config = {
@@ -53,11 +49,10 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     }
 
-
     const Usuario = sequelize.define(alias, cols, config);
 
     Usuario.associate = function (models) {
-        Usuario.hasMany(models.Producto, { 
+        Usuario.belongsTo(models.Producto, { 
             as: "producto",
             foreignKey: "producto_id"
         })

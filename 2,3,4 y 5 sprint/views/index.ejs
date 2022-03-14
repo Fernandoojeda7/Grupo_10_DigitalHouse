@@ -38,13 +38,13 @@
     </script>
         <h2>Ultimas Vistas</h2>
         <div class="contenedor-por-seccion">
-        <% products.forEach(product => { %>
-          <% if (product.type == 'ultimas-vistas') { %>
+        <% productos.forEach(producto => { %>
+          <% if (producto.type == 'ultimas-vistas') { %>
             <div class="contenedor">
-                <a href="/products/productDetail/<%= product.id %>" id="contenedor"><img src="/img/products/<%= product.image %>"  alt=""></a>
-                <h3><%= product.name %></h3>
-                <h4>$<%= product.price %> ARS</h4>
-                <h5><%= product.discount %> % off</h5>
+                <a href="/products/productDetail/<%= producto.id %>" id="contenedor"><img src="/img/products/<%= producto.image %>"  alt=""></a>
+                <h3><%= producto.name %></h3>
+                <h4>$<%= producto.price %> ARS</h4>
+                <h5><%= producto.discount %> % off</h5>
                 <i id="carrito" class="fas fa-dolly"></i>
             </div>
             <% } %>
@@ -54,13 +54,13 @@
 
         <h1>NOVEDADES</h1>
         <div class="contenedor-por-seccion">
-            <% products.forEach(product => { %>
-                <% if (product.type == 'novedades') { %>
+            <% productos.forEach(producto => { %>
+                <% if (producto.type == 'novedades') { %>
                 <div class="contenedor">
-                  <a href="/products/productDetail/<%= product.id %>" id="contenedor"><img src="/img/products/<%= product.image %>"  alt=""></a>
-                    <h3><%= product.name %></h3>
-                    <h4>$<%= product.price %> ARS</h4>
-                    <h5><%= product.discount %> % off</h5>
+                  <a href="/products/productDetail/<%= producto.id %>" id="contenedor"><img src="/img/products/<%= producto.image %>"  alt=""></a>
+                    <h3><%= producto.name %></h3>
+                    <h4>$<%= producto.price %> ARS</h4>
+                    <h5><%= producto.discount %> % off</h5>
                     <i id="carrito" class="fas fa-dolly"></i>
                 </div>
                 <% } %>
@@ -69,13 +69,13 @@
            
         <h1>PROMOCIONES</h1>
         <div class="contenedor-por-seccion">
-            <% products.forEach(product => { %>
-                <% if (product.type == 'promociones') { %>
+            <% productos.forEach(producto => { %>
+                <% if (producto.type == 'promociones') { %>
                 <div class="contenedor">
-                  <a href="/products/productDetail/<%= product.id %>" id="contenedor"><img src="/img/products/<%= product.image %>"  alt=""></a>
-                    <h3><%= product.name %></h3>
-                    <h4>$<%= product.price %> ARS</h4>
-                    <h5><%= product.discount %> % off</h5>
+                  <a href="/products/productDetail/<%= producto.id %>" id="contenedor"><img src="/img/products/<%= producto.image %>"  alt=""></a>
+                    <h3><%= producto.name %></h3>
+                    <h4>$<%= producto.price %> ARS</h4>
+                    <h5><%= producto.discount %> % off</h5>
                     <i id="carrito" class="fas fa-dolly"></i>
                 </div>
                 <% } %>

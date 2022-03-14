@@ -9,12 +9,12 @@
         
         <h1>PRODUCTOS ENCONTRADOS</h1><br>
         <div class="contenedor-por-seccion">
-        <% products.forEach(product => { %>
+        <% Productos.forEach(producto => { %>
                  <div class="contenedor">
-                <a href="/products/productDetail/<%= product.id %>" id="contenedor"><img src="/img/products/<%= product.image %>"  alt=""></a>
-                <h3><%= product.name %></h3>
-                <h4>$<%= product.price %> ARS</h4>
-                <h5><%= product.discount %> % off</h5>
+                <a href="/products/productDetail/<%= producto.id %>" id="contenedor"><img src="/img/products/<%= producto.image %>"  alt=""></a>
+                <h3><%= producto.name %></h3>
+                <h4>$<%= producto.price %> ARS</h4>
+                <h5><%= producto.discount %> % off</h5>
                 
             </div>
             <% }) %>

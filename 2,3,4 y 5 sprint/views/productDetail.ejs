@@ -6,12 +6,12 @@
      <main class="main-producto">
               <div class="contenedor-por-seccion">
                <div class="contenedor-producto">
-                <img src="/img/products/<%= detailProduct.image %>" alt="">
+                <img src="/img/products/<%= productos.image %>" alt="">
                 <div class="nombre-precio-cod">
-                    <h3><%= detailProduct.name %> </h3>
-                    <H5>CODIGO  00<%= detailProduct.id %> </H5>
-                    <h4>$ <%= detailProduct.price %> ARS </h4>
-                    <H5><%= detailProduct.id%> % Off </H5>
+                    <h3><%= productos.name %> </h3>
+                    <H5>CODIGO  00<%= productos.id %> </H5>
+                    <h4>$ <%= productos.price %> ARS </h4>
+                    <H5><%= productos.discount%> % Off </H5>
                     <div class="cant-prod1">
                         <label>Cantidad</label>
                         <input type="number" name="cantidad-producto" value="1" min="1" max="100" >
@@ -35,7 +35,7 @@
             
         <h1>DESCRIPCIÓN</h1><br>
         <article>
-           <p><%= detailProduct.description %> </p> <br>
+           <p><%= productos.description %> </p> <br>
         </article>
            
     </main>

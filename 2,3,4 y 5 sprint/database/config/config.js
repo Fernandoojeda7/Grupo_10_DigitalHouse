@@ -2,7 +2,7 @@ module.exports = {
   "development": {
     "username": "root",
     "password": "leandro",
-    "database": "todoapedal_db",
+    "database": "todo_a_pedal_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
