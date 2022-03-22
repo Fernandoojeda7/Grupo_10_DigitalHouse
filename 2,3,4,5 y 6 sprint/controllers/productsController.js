@@ -91,8 +91,8 @@ const controller = {
     },
 	
 	destroy: function (req,res) {
-        let productId = req.params.id;
-        Productos.destroy({where: {id: productId}, force: true}) 
+        let productoId = req.params.id;
+        Productos.destroy({where: {id: productoId}, force: true}) 
         .then(()=>{
             return res.redirect('/products')})
         .catch(error => res.send(error)) 

@@ -44,7 +44,10 @@ router.get('/register', guestMiddleware, userController.register);
 router.post('/register', upload.single('image'), validatorRegistered, userController.registered);
 
 router.get('/users', authMiddleware, userController.users);
-router.get('/usersDB', authMiddleware, userController.usersDB);
+router.get('/usersDB',  userController.usersDB);
 
+router.get('/edit/:id', userController.edit); 
+router.put('/edit/:id', userController.update); 
 
+router.delete('/delete/:id', userController.destroy); 
 module.exports = router;

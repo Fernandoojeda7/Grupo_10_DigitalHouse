@@ -12,12 +12,12 @@
                 <button type="submit"><i id="uni" class="fas fa-search"></i></button>
             </form>
             <div class="contenedor-user-login">
-                        <a id="image" href="/user/usersDB"><img src="/img/users/<%= Usuarios.image %>"  alt=""  id="image" class="image"></a>
+                        <a id="image" href="/user/usersDB"><img src="/img/users/<%= usuarios.image %>"  alt=""  id="image" class="image"></a>
                         <div id="contenedor-user-login">
                             <h3>Bienvenido</h3>
-                            <h4><%= Usuarios.nombre %></h4>
-                            <h5><%= Usuarios.documento %></h5>
-                            <h5>Usuario #<%= Usuarios.id %></h5>
+                            <h4><%= usuarios.nombre %></h4>
+                            <h5><%= usuarios.documento %></h5>
+                            <h5>Usuario #<%= usuarios.id %></h5>
                         </div>
             </div>
         </div>
@@ -64,51 +64,7 @@
   });
 });
     </script>
-        <h2>Ultimas Vistas</h2>
-        <div class="contenedor-por-seccion">
-        <% productos.forEach(producto => { %>
-          <% if (producto.type == 'ultimas-vistas') { %>
-            <div class="contenedor">
-                <a href="/products/productDetail/<%= producto.id %>" id="contenedor"><img src="/img/products/<%= producto.image %>"  alt=""></a>
-                <h3><%= producto.name %></h3>
-                <h4>$<%= producto.price %> ARS</h4>
-                <h5><%= producto.discount %> % off</h5>
-                <i id="carrito" class="fas fa-dolly"></i>
-            </div>
-            <% } %>
-            <% }) %>
-          
-        </div>
-
-        <h1>NOVEDADES</h1>
-        <div class="contenedor-por-seccion">
-            <% productos.forEach(producto => { %>
-                <% if (producto.type == 'novedades') { %>
-                <div class="contenedor">
-                  <a href="/products/productDetail/<%= producto.id %>" id="contenedor"><img src="/img/products/<%= producto.image %>"  alt=""></a>
-                    <h3><%= producto.name %></h3>
-                    <h4>$<%= producto.price %> ARS</h4>
-                    <h5><%= producto.discount %> % off</h5>
-                    <i id="carrito" class="fas fa-dolly"></i>
-                </div>
-                <% } %>
-                <% }) %>
-            </div>
-           
-        <h1>PROMOCIONES</h1>
-        <div class="contenedor-por-seccion">
-            <% productos.forEach(producto => { %>
-                <% if (producto.type == 'promociones') { %>
-                <div class="contenedor">
-                  <a href="/products/productDetail/<%= producto.id %>" id="contenedor"><img src="/img/products/<%= producto.image %>"  alt=""></a>
-                    <h3><%= producto.name %></h3>
-                    <h4>$<%= producto.price %> ARS</h4>
-                    <h5><%= producto.discount %> % off</h5>
-                    <i id="carrito" class="fas fa-dolly"></i>
-                </div>
-                <% } %>
-                <% }) %>
-            </div>
+       
     </main>
     
     <%- include('./partials/footer') %>

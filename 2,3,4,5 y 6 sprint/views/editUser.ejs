@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head')%>
+<body class="body-agregarProd">
+    <main class="body-agregarProd">
+        <h1> EDICIÓN DE USUARIO <%= Usuario.nombre %> <%= Usuario.apellido %></h1>
+        <div class="contenedor-agregarProd">
+            <form action="/user/edit/<%= Usuario.id %>?_method=PUT" method="POST" >
+                <div class="form-agregarProd">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" class="control-input" value="<%= locals.old && old.nombre ? old.nombre : ''%>" />
+                </div> 
+                <div class="form-agregarProd">
+                <label for="apellido">Apellido</label>
+                <input type="text" name="apellido" class="control-input" value="<%= locals.old && old.apellido ? old.apellido : ''%>" />
+                </div>
+                <div class="form-agregarProd">
+                    <label for="documento">Documento Nº</label>
+                <input type="number" name="documento" class="control-input" value="<%= locals.old && old.documento ? old.documento : ''%>" />
+                </div>
+                <div class="form-agregarProd">
+                    
+                    <label for="direccion">Dirección</label>
+                    <input type="text" name="direccion" class="control-input" value="<%= locals.old && old.direccion ? old.direccion : ''%>" />
+                </div>
+                <div class="form-agregarProd">
+                    <label for="email">Correo Electronico</label>
+                <input type="email" name="email" placeholder="correo electronico"   class="control-input" value="<%= locals.old && old.email ? old.email : ''%>" >
+                </div>
+                
+                <button type="submit" class="boton-agregarProd" value="edit">EDITAR</button>   
+            </form>
+        </div>
+    </main>    
+</body>
+</html>
