@@ -28,13 +28,13 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         contraseña: {
-            type: dataTypes.STRING,
+            type: dataTypes.TEXT,
             allowNull: false
         },
         
         product_id: {
             type: dataTypes.INTEGER,
-            allowNull: false
+            
         }
     };
     let config = {

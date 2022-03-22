@@ -99,21 +99,21 @@ const controller = {
     },
 
 	search: (req, res) =>{
+		Productos.findAll()
+		.then((productos) => {
 		let busqueda = req.query.search;
-		Productos
-		let resultado = [];
-		for (let i = 0; i < Productos.length; i++){
+		for (let i = 0; i < productos.length; i++){
 			if(busqueda.length < 0){
 				break;
 			}
-			if (Productos[i].name.includes(busqueda)){
-				resultado.push(Productos[i]);
+			if (productos[i].name.includes(busqueda)){
+				resultado.push(productos[i]);
 			} else {
 				res.send('El Producto no se encontro')
 			}
 		}
 		res.render('productResult', {resultado: resultado})
-	}
+	})}
 };
 
 

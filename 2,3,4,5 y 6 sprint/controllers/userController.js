@@ -41,7 +41,6 @@ const controller = {
 					email: req.body.email,
 					fecha_nacimiento: req.body.fecha_nacimiento,
 					direccion: req.body.direccion,
-					// contraseña: req.body.contraseña,
 					contraseña: bcrypt.hashSync(req.body.contraseña, 10),
 					image: req.file.filename,
 					producto_id: req.body.producto_id
@@ -60,7 +59,6 @@ const controller = {
 
 	processLogin: (req, res) =>{
 		 const errors = validationResult(req);
-		
 		 Usuarios.findAll()
 		 .then((usuarios)=>{
 			let usuarioALoguearse

@@ -1,12 +1,13 @@
-const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcryptjs')
 const { validationResult } = require('express-validator');
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
 
-
-const proveedorFilePath = path.join(__dirname, '../data/proveedorDataBase.json');
-const proveedor = JSON.parse(fs.readFileSync(proveedorFilePath, 'utf-8'));
-
+const Productos = db.Producto;
+const Ventas = db.Venta;
+const Proveedores = db.Proveedor
 
 
 const controller = {
@@ -16,16 +17,48 @@ const controller = {
 		res.render('loginProv')
 	},
 
-	processLoginProv: (req, res) =>{
+	registerProv: (req, res) => {
+		let promProducto = Productos.findAll();
+		let promVenta = Ventas.findAll();
+		        
+        Promise
+        .all([promProducto, promVenta])
+        .then(([allProductos, allVentas]) => {
+            return res.render(path.resolve(__dirname, '..', 'views',  'registerProveedor'), {allProductos, allVentas})})
+        .catch(error => res.send(error))
+    },
+
+	registeredProv: (req, res) => {
+		Proveedores.findAll()
+		.then((resultado)=> {
+
+			console.log(resultado)
+		})
 		const errors = validationResult(req);
 		if (errors.isEmpty()){
-			 let provJson = fs.readFileSync(proveedorFilePath, 'utf-8');
-			 let proveedor;
-			 if(proveedor == "") {
-				 proveedor =[];
-			 } else {
-				 proveedor = JSON.parse(provJson)
-			 }
+		Proveedores.create({
+					nombre: req.body.nombre,
+					apellido: req.body.apellido,
+					documento: req.body.documento,
+					email: req.body.email,
+					direccion: req.body.direccion,
+					contraseña: bcrypt.hashSync(req.body.contraseña, 10),
+					product_id: req.body.product_id
+			
+		})
+		.then(()=> {
+			return res.redirect('loginProv')})
+		.catch(error => res.send(error)) 
+		} else {
+
+			return res.render('registerProveedor', {errors: errors.errors, old: req.body});
+		}
+	},
+
+	processLoginProv: (req, res) =>{
+		const errors = validationResult(req);
+		Proveedores.findAll()
+		.then((proveedor) => {
 			 let provALogin
 			 for (let i = 0; i < proveedor.length; i++) {
 				 if (proveedor[i].email == req.body.email) {
@@ -43,42 +76,14 @@ const controller = {
 			 }
 
 			 req.session.provLogin = provALogin;
+			 res.render('addProduct');
 
 			 if (req.body.recordame != undefined) {
 				res.cookie('recordame', provALogin.email, {maxAge: 20000 })
-			 }
-			 console.log(provALogin);
-			 res.render('addProduct');
-		} else {
-
-			return res.render('loginProv', {errors: errors.errors});
-		}
-	},
-
-    registerProv: (req, res) => {
-		res.render('registerProveedor');
-	},
-
-	registeredProv: (req, res) => {
-		const errors = validationResult(req);
-		if (errors.isEmpty()){
-		let newProv= {
-			id: proveedor[proveedor.length - 1].id + 1,
-			...req.body,
-			contraseña: bcrypt.hashSync(req.body.contraseña, 10),
-			
-		}
-
-		proveedor.push(newProv)
-
-		const jsonProv = JSON.stringify(proveedor);
-		fs.writeFileSync(proveedorFilePath, jsonProv, 'utf-8')
-		res.render('loginProv');
-		} else {
-
-			return res.render('registerProveedor', {errors: errors.errors, old: req.body});
-		}
+			 }})
+			 .catch(error => res.send(error))
 	}
+
 };
 
 module.exports = controller;
