@@ -15,3 +15,7 @@ Ya con un grupo mas consolidado y conociendo las fortalezas y debilidades de cad
 RETRO SPRINT 5
 
 Este no fue como los Sprint pasados, lamentablemente Giuliana no pudo continuar con el curso, por lo que tuvimos que volver a repensar la metodología de trabajo y repartirnos las tareas pendientes. Pudimos cumplir con los puntos solicitados con mucha dedicación. Seguir haciendo... seguir con la comunicación, y el mismo desempeño de hasta ahora. 
+
+RETRO SPRINT 6
+
+Me he quedado solo con el proyecto, otro compañero abandono, pero a seguir con las mismas actitud del comienzo y poniendo más empeño aun. Seguir realizando los sprint como los anteriores y no dejar pasar mucho tiempo entre consigna y consigna.  
