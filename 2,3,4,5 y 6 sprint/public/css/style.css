@@ -211,6 +211,12 @@ main h2{
 .fondo-main{
     background: url("../img/products/banner3.jpg");
 }
+.fondo-main1{
+    background: url("../img/products/banner.png");
+}
+.resultado{
+    background: url("../img/products/resultado.jpg");
+}
 .form-carrito{
     margin: 15px 0;
     display: flex;
@@ -232,6 +238,7 @@ main h2{
     margin: 10px 5px;
     color: #ffffff;
 }
+
 .carrito-envio input{
     margin: 0 10px 0 0;
 }

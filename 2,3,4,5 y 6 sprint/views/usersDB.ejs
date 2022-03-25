@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include('partials/head', {title: 'USUARIOS REGISTRADOS'}) %>
+<%- include('partials/head', {title: 'Perfil'}) %>
 <body class="main-index">
     <%- include('partials/header') %> 
     
     <main class="main-index">
         
-        <h1>TODOS LOS USUARIOS</h1><br>
+        <h1>Perfil Usuario <%= Usuarios.nombre %> <%= Usuarios.apellido %></h1><br>
         <div class="contenedor-por-seccion">
-            <% Usuarios.forEach(usuario => { %>
-                     <div class="contenedor">
-                        <img src="/img/users/<%= usuario.image %>"  alt="">
-                        <h3><%= usuario.nombre %> <%= usuario.apellido %></h3>
-                        <h3><%= usuario.documento %></h3>
-                        <h3>Usuario #<%= usuario.id %></h3>
-                        <h3><%= usuario.email %></h3>
-                    <form action="/user/delete/<%= usuario.id %>?_method=DELETE" method="POST">
+                 <div class="contenedor">
+                        <img src="/img/users/<%= Usuarios.image %>"  alt="">
+                        <h3><%= Usuarios.nombre %> <%= Usuarios.apellido %></h3>
+                        <h3><%= Usuarios.documento %></h3>
+                        <h3>Usuario #<%= Usuarios.id %></h3>
+                        <h3><%= Usuarios.email %></h3>
+                    <form action="/user/delete/<%= Usuarios.id %>?_method=DELETE" method="POST">
                     <button style="background-color: red; font-size: 20px; margin-left: 15px;" type="submit">Eliminar</button>
                     </form>
-                    <a href="/user/edit/<%= usuario.id %>"><button style="background-color: green; font-size: 20px; margin: 5px 0; ">Editar</button></a>
+                    <a href="/user/edit/<%= Usuarios.id %>"><button style="background-color: green; font-size: 20px; margin: 5px 0; ">Editar</button></a>
                 </div>
-                <% }) %>
             </div>
     </main>
 

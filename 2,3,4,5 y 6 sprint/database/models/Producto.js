@@ -46,20 +46,20 @@ module.exports = (sequelize, dataTypes) => {
     const Producto = sequelize.define(alias, cols, config);
 
     Producto.associate = function (models) {
-        Producto.hasMany(models.Usuario, { 
-            as: "usuario",
-            foreignKey: "producto_id"
-        })
-        
         Producto.hasMany(models.Venta, { 
             as: "venta",
             foreignKey: "id_producto"
             })
        
-        Producto.hasMany(models.Proveedor, { 
-        as: "proveedor",
-        foreignKey: "product_id"
+      
+        Producto.belongsToMany(models.Proveedor, { 
+            as: "proveedores",
+            through: 'producto_proveedor',
+            foreignKey: 'producto_id',
+            otherKey: 'proveedor_id',
+            timestamps: false
             })
+            
         }
     return Producto
 

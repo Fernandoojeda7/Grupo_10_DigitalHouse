@@ -7,15 +7,14 @@ CREATE TABLE `usuarios` (
    `email` VARCHAR(50) NOT NULL,
    `fecha_nacimiento` DATETIME NOT NULL,
    `image` BLOB NOT NULL,
-   `contraseña` INT NOT NULL,
-   `producto_id` INT NOT NULL,
+   `contraseña` TEXT NOT NULL,
    PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `productos` (
    `id` INT NOT NULL AUTO_INCREMENT,
    `name` VARCHAR(255) NOT NULL,
-   `discount` VARCHAR(20),
+   `discount` INT,
    `price` INT NOT NULL,
    `category` VARCHAR(255) NOT NULL,
    `type` VARCHAR(255) NOT NULL,
@@ -30,6 +29,7 @@ CREATE TABLE `ventas` (
    `monto` INT NOT NULL,
    `forma_pago` VARCHAR(255) NOT NULL,
    `id_producto` INT NOT NULL,
+   `id_usuario` INT NOT NULL,
    PRIMARY KEY (`id`)
 );
 
@@ -40,23 +40,31 @@ CREATE TABLE `proveedores` (
    `documento` INT NOT NULL,
    `email` VARCHAR(200) NOT NULL,
    `direccion` VARCHAR(200) NOT NULL,
-   `product_id` INT NOT NULL,
-   `contraseña` INT NOT NULL,
+   `contraseña` TEXT NOT NULL,
    PRIMARY KEY (`id`)
 );
 
 CREATE TABLE `proveedor_venta` (
    `id_proveedor` INT NOT NULL,
    `venta_id` INT NOT NULL
+  
+);
+
+CREATE TABLE `producto_proveedor` (
+   `producto_id` INT NOT NULL,
+   `proveedor_id` INT NOT NULL
+
 );
 
 
-ALTER TABLE `usuarios` ADD CONSTRAINT `FK_33580400-7d58-483a-9305-d2832d261299` FOREIGN KEY (`producto_id`) REFERENCES `productos`(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
 ALTER TABLE `ventas` ADD CONSTRAINT `FK_760fe5b3-d09f-47f6-8bca-1d1c83c2548a` FOREIGN KEY (`id_producto`) REFERENCES `productos`(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
-ALTER TABLE `proveedores` ADD CONSTRAINT `FK_2563d1a6-aaee-4fae-a1e5-21e894f53c0a` FOREIGN KEY (`product_id`) REFERENCES `productos`(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE `ventas` ADD CONSTRAINT `FK_8322534e-d146-436a-85a1-3392717615e8` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios`(`id`) ON DELETE NO ACTION ;
 
 ALTER TABLE `proveedor_venta` ADD CONSTRAINT `FK_3a3cee4a-9757-497c-9adc-dd98e50dae3c` FOREIGN KEY (`venta_id`) REFERENCES `ventas`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ALTER TABLE `proveedor_venta` ADD CONSTRAINT `FK_de0bd488-29e7-47e4-bb18-dfaccb3b86fc` FOREIGN KEY (`id_proveedor`) REFERENCES `proveedores`(`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+ALTER TABLE `producto_proveedor` ADD CONSTRAINT `FK_b659a192-ef95-4fcb-ad72-229a3dde215c` FOREIGN KEY (`producto_id`) REFERENCES `productos`(`id`)  ;
+
+ALTER TABLE `producto_proveedor` ADD CONSTRAINT `FK_a470e2dc-2e88-433d-a10a-e5ada0a61c0f` FOREIGN KEY (`proveedor_id`) REFERENCES `proveedores`(`id`)  ;

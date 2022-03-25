@@ -15,6 +15,9 @@ const controller = {
 		res.render('login')
 	},
 
+	resultado: (req, res) => {
+		res.render('perfilAct')
+	},
 	register: function (req, res) {
 		let promProducto = Productos.findAll();
         
@@ -77,52 +80,53 @@ const controller = {
 						}
 					 ]});
 				 }
-				 
 				 req.session.usuarioLogueado = usuarioALoguearse;
-				 res.render('users', {usuarios: usuarioALoguearse, Productos })
+				 const productos = Productos.findAll()
+				 .then((response) =>{
+					  res.render('users', {usuarios: usuarioALoguearse, productos: response })
+				 })
 				 
 				 if (req.body.recordame != undefined) {
-					 res.cookie('recordame', usuarioALoguearse.email, {maxAge: 20000 })
+					 res.cookie('recordame', usuarioALoguearse.email, {maxAge: 320000 })
 				 }}).catch(error => res.send(error))
 	},
 
 	users: (req, res) => {
-		let promProducto = Productos.findAll();
-		let promUsuario = Usuarios.findAll();
-        
-        Promise
-        .all([promProducto, promUsuario])
-        .then(([Productos, allProductos, allUsuarios]) => {
-            return res.render('users', {Productos,allProductos,allUsuarios})})
-        .catch(error => res.send(error))
-    
-		
-			// let usuarioALoguearse
-			//  for (let i = 0; i < usuarios.length; i++) {
-			// 	 if (Usuarios[i].email == req.body.email) {
-			// 		 if (bcrypt.compareSync(req.body.contraseña, Usuarios[i].contraseña)){
-			// 			   usuarioALoguearse = Usuarios[i];
-			// 			 break;
-			// 		 }
-					 
-			// 	 }
-			//  }
+		Usuarios.findAll()
+		.then((usuarios)=>{
+		   let usuarioALoguearse
+			for (let i = 0; i < usuarios.length; i++) {
+				if (usuarios[i].email == req.body.email) {
+					if (bcrypt.compareSync(req.body.contraseña, usuarios[i].contraseña)){
+						  usuarioALoguearse = usuarios[i];
+						break;
+					}
+					
+				}
+			}
+				if(usuarioALoguearse == undefined) {
+					return res.render('login', {errors: [
+						{msg: 'Credenciales Invalidas',
+					   }
+					]});
+				}
+				req.session.usuarioLogueado = usuarioALoguearse;
+				const productos = Productos.findAll()
+				.then((response) =>{
+					 res.render('users', {usuarios: usuarioALoguearse, productos: response })
+				})
 				
-			// 	 req.session.usuarioLogueado = usuarioALoguearse;
-				 
-				 
-			// 	 if (req.body.recordame != undefined) {
-			// 		 res.cookie('recordame', usuarioALoguearse.email, {maxAge: 20000 })
-			// 	 }   
-			// 	res.render('users', { Usuarios: usuarioALoguearse, Productos })
-				
+				if (req.body.recordame != undefined) {
+					res.cookie('recordame', usuarioALoguearse.email, {maxAge: 320000 })
+				}}).catch(error => res.send(error))
+			
 	},
 
 	usersDB: (req, res) => {
-		Usuarios.findAll()
-		 .then((Usuarios)=>{
-		res.render('usersDB', { Usuarios })
-	})
+		Usuarios.findByPk(req.params.id)
+			.then(usuario => {
+				res.render('UsersDB', {Usuarios: usuario} )
+			}).catch(error => res.send(error))    
 },
 
 edit: function(req,res) {
@@ -147,7 +151,7 @@ edit: function(req,res) {
                 where: {id: idUsuario}
             })
         .then(()=> {
-            return res.redirect('/user/usersDB')})            
+            return res.render('perfilAct')})            
         .catch(error => res.send(error))
     },
 	

@@ -32,10 +32,6 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         
-        product_id: {
-            type: dataTypes.INTEGER,
-            
-        }
     };
     let config = {
         tableName: "proveedores",
@@ -46,11 +42,6 @@ module.exports = (sequelize, dataTypes) => {
     const Proveedor = sequelize.define(alias, cols, config);
 
     Proveedor.associate = function (models) {
-        Proveedor.belongsTo(models.Producto, { 
-            as: "producto",
-            foreignKey: "product_id"
-        })
-    
     Proveedor.belongsToMany(models.Venta, { 
         as: "ventas",
         through: 'proveedor_venta',
@@ -58,8 +49,16 @@ module.exports = (sequelize, dataTypes) => {
         otherKey: 'venta_id',
         timestamps: false
         })
-    }
+    
 
+    Proveedor.belongsToMany(models.Producto, {
+        as: "productos",
+        through: 'producto_proveedor',
+        foreignKey: 'proveedor_id',
+        otherKey: 'producto_id',
+        timestamps: false
+        })
+    }
     return Proveedor;
 
 }

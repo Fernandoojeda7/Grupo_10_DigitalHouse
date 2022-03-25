@@ -22,6 +22,10 @@ module.exports = (sequelize, dataTypes) => {
         id_producto: {
             type: dataTypes.INTEGER,
             allowNull: false
+        },
+        id_usuario: {
+            type: dataTypes.INTEGER,
+            allowNull: false
         }
     };
     let config = {
@@ -36,6 +40,11 @@ module.exports = (sequelize, dataTypes) => {
         Venta.belongsTo(models.Producto, { 
         as: "producto",
         foreignKey: "id_producto"
+        })
+
+    Venta.belongsTo(models.Usuario, { 
+        as: "usuario",
+        foreignKey: "id_usuario"
         })
 
     Venta.belongsToMany(models.Proveedor, {

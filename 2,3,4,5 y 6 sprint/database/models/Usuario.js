@@ -39,10 +39,6 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.TEXT,
             allowNull: false
         },
-        producto_id: {
-            type: dataTypes.INTEGER,
-            
-        }
     };
     let config = {
         tableName: "usuarios",
@@ -52,9 +48,9 @@ module.exports = (sequelize, dataTypes) => {
     const Usuario = sequelize.define(alias, cols, config);
 
     Usuario.associate = function (models) {
-        Usuario.belongsTo(models.Producto, { 
-            as: "producto",
-            foreignKey: "producto_id"
+        Usuario.hasMany(models.Venta, { 
+            as: "venta",
+            foreignKey: "id_usuario"
         })
         }
 

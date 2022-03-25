@@ -28,10 +28,10 @@
    <br>
    <br>
    <% if (typeof errors != 'undefined') { %>
-    <p style="color: rgb(0, 195, 255); font-family: 'Fjalla One', sans-serif; font-size: 1.5vw;">ERROR</p>
+    <p style="color: black; font-family: 'Fjalla One', sans-serif; font-size: 1.5vw;">ERROR</p>
     <ul>
         <% for( let i = 0; i < errors.length; i++) { %>
-        <li>
+        <li style="color: red; font-family: 'Fjalla One', sans-serif; font-size: 1.2vw;">
             <%= errors[i].msg%>
         </li>
         <% } %>

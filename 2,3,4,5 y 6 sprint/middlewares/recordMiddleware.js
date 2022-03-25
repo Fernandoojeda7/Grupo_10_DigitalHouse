@@ -1,23 +1,22 @@
+const db = require('../database/models');
+
+const Usuarios = db.Usuario;
 function recordMiddleware(req, res, next) {
     next();
     if (req.cookies.recordame != undefined &&
-        req.session.userLogin == undefined) {
-            let usersJson = fs.readFileSync(usersFilePath, 'utf-8');
-            let users;
-            if(users == "") {
-                users =[];
-            } else {
-                users = JSON.parse(usersJson)
-            }
-                let userALogin;
+        req.session.usuarioLogueado == undefined) {
+            Usuarios.findAll()
+            .then((users) => {
+                let usuarioALoguearse
             for (let i = 0; i < users.length; i++) {
                 if (users[i].email == req.cookies.recordame) {
-                            userALogin = users[i];
+                    usuarioALoguearse = users[i];
                         break;
                     }
                 }
-                req.session.userLogin = userALogin;
-            } 
+                req.session.usuarioLogueado = usuarioALoguearse;
+                console.log(usuarioALoguearse)
+            })} 
         }
 
 

@@ -39,12 +39,12 @@ const validatorLogin = [
 
 router.get('/login', userController.login);
 router.post('/users', validatorLogin, userController.processLogin);
-
+router.get('/perfilAct', userController.resultado);
 router.get('/register', guestMiddleware, userController.register);
 router.post('/register', upload.single('image'), validatorRegistered, userController.registered);
 
-router.get('/users', authMiddleware, userController.users);
-router.get('/usersDB',  userController.usersDB);
+router.get('/users', userController.users);
+router.get('/usersDB/:id',  userController.usersDB);
 
 router.get('/edit/:id', userController.edit); 
 router.put('/edit/:id', userController.update); 

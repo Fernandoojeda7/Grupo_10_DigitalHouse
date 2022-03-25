@@ -71,7 +71,7 @@ const controller = {
 			 }
 			 if (provALogin == undefined) {
 				return res.render('loginProv', {errors: [
-					{msg: 'Contraseña Incorrecta'}
+					{msg: 'Credenciales Invalidas'}
 				]});
 			 }
 
