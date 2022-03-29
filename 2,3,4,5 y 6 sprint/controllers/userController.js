@@ -87,38 +87,32 @@ const controller = {
 				 })
 				 
 				 if (req.body.recordame != undefined) {
-					 res.cookie('recordame', usuarioALoguearse.email, {maxAge: 320000 })
+					 res.cookie('recordame', usuarioALoguearse.email, {maxAge: 20000 })
 				 }}).catch(error => res.send(error))
 	},
 
 	users: (req, res) => {
-		Usuarios.findAll()
-		.then((usuarios)=>{
-		   let usuarioALoguearse
-			for (let i = 0; i < usuarios.length; i++) {
-				if (usuarios[i].email == req.body.email) {
-					if (bcrypt.compareSync(req.body.contraseña, usuarios[i].contraseña)){
-						  usuarioALoguearse = usuarios[i];
-						break;
+			Usuarios.findAll()
+				.then((users) => {
+					let usuarioALoguearse
+				for (let i = 0; i < users.length; i++) {
+					if (users[i].email == req.cookies.recordame) {
+						usuarioALoguearse = users[i];
+							break;
+						}
 					}
-					
-				}
-			}
-				if(usuarioALoguearse == undefined) {
-					return res.render('login', {errors: [
-						{msg: 'Credenciales Invalidas',
-					   }
-					]});
-				}
+					if(usuarioALoguearse == undefined) {
+						return res.render('login', {errors: [
+							{msg: 'Debes Iniciar Sesión',
+						   }
+						]});
+					}
 				req.session.usuarioLogueado = usuarioALoguearse;
 				const productos = Productos.findAll()
 				.then((response) =>{
 					 res.render('users', {usuarios: usuarioALoguearse, productos: response })
 				})
-				
-				if (req.body.recordame != undefined) {
-					res.cookie('recordame', usuarioALoguearse.email, {maxAge: 320000 })
-				}}).catch(error => res.send(error))
+				})
 			
 	},
 
@@ -145,7 +139,8 @@ edit: function(req,res) {
 					apellido: req.body.apellido,
 					documento: req.body.documento,
 					direccion: req.body.direccion,
-					email: req.body.email
+					email: req.body.email,
+					contraseña: bcrypt.hashSync(req.body.contraseña, 10)
 			},
             {
                 where: {id: idUsuario}

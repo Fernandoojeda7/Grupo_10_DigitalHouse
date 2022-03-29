@@ -27,6 +27,10 @@
                     <label for="email">Correo Electronico</label>
                 <input type="email" name="email" placeholder="correo electronico"   class="control-input" value="<%= locals.old && old.email ? old.email : ''%>" >
                 </div>
+                <div class="form-agregarProd">
+                    <label>Contraseña</label>
+                    <input type="password" name="contraseña" id="contraseña" class="control-input" value="<%= locals.old && old.contraseña ? old.contraseña : ''%>" >
+                </div>
                 
                 <button type="submit" class="boton-agregarProd" value="edit">EDITAR</button>   
             </form>

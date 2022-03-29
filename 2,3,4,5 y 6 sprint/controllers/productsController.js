@@ -100,19 +100,19 @@ const controller = {
 
 	search: (req, res) =>{
 		Productos.findAll()
-		.then((productos) => {
+		.then((producto) => {
 		let busqueda = req.query.search;
-		for (let i = 0; i < productos.length; i++){
+		for (let i = 0; i < producto.length; i++){
 			if(busqueda.length < 0){
 				break;
 			}
-			if (productos[i].name.includes(busqueda)){
-				resultado.push(productos[i]);
+			if (producto[i].name.includes(busqueda)){
+				resultado.push(producto[i]);
 			} else {
 				res.send('El Producto no se encontro')
 			}
 		}
-		res.render('productResult', {resultado: resultado})
+		res.render('productResult', {Productos: producto, resultado: resultado})
 	})}
 };
 
