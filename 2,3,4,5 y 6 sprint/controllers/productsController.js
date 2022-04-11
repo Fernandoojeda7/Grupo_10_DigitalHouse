@@ -27,6 +27,11 @@ const controller = {
 			}).catch(error => res.send(error))
 		
 	},
+
+	productCarrito: (req, res) => {
+		res.render('productCart')
+	},
+	
 	add: function (req, res) {
 		let promVentas = Ventas.findAll();
         let promProveedores = Proveedores.findAll();
@@ -87,7 +92,8 @@ const controller = {
             })
         .then(()=> {
             return res.redirect('/products')})            
-        .catch(error => res.send(error))
+        .catch((error) => res.send(error))
+	
     },
 	
 	destroy: function (req,res) {
@@ -99,22 +105,26 @@ const controller = {
     },
 
 	search: (req, res) =>{
-		Productos.findAll()
-		.then((producto) => {
 		let busqueda = req.query.search;
-		for (let i = 0; i < producto.length; i++){
-			if(busqueda.length < 0){
-				break;
-			}
-			if (producto[i].name.includes(busqueda)){
-				resultado.push(producto[i]);
+		busqueda = busqueda.toLowerCase();
+		let resultados = [];
+		Productos.findAll()
+		.then((productos) =>{ 
+		for(let producto of productos){
+			let nombre = producto.name.toLowerCase();
+			if(nombre.indexOf(busqueda) != -1){
+				resultados.push(producto);
+				console.log(resultados);
+				res.render('productoBuscado', { Productos: productos, resultados: resultados }) 
 			} else {
-				res.send('El Producto no se encontro')
+				return res.render('noEncontre')
 			}
-		}
-		res.render('productResult', {Productos: producto, resultado: resultado})
-	})}
+			
+			} 
+				
+		
+		})
+	}
 };
-
 
 module.exports = controller;

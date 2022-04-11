@@ -9,6 +9,14 @@ const controller = {
 			res.render('index', {productos})
 		}).catch(error => res.send(error))
 	},
+
+	empresa: (req, res) =>{
+		res.render('empresa')
+	},
+
+	contacto: (req, res) =>{
+		res.render('contacto')
+	},
 	
 };
 

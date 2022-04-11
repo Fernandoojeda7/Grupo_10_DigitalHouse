@@ -9,7 +9,7 @@
         
         <h1>PRODUCTOS ENCONTRADOS</h1><br>
         <div class="contenedor-por-seccion">
-        <% resultado.forEach(producto => { %>
+        <% resultados.forEach(producto => { %>
                  <div class="contenedor">
                 <a href="/products/productDetail/<%= producto.id %>" id="contenedor"><img src="/img/products/<%= producto.image %>"  alt=""></a>
                 <h3><%= producto.name %></h3>

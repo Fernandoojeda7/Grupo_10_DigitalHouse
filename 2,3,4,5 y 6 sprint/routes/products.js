@@ -21,11 +21,11 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 const validatorProducts = [
-    check('name').notEmpty().withMessage('Obligatorio Nombre'),
+    check('name').notEmpty().isLength({min: 5}) .withMessage('Obligatorio Nombre'),
     check('price').notEmpty().withMessage('Obligatorio Precio'),
     check('category').notEmpty().withMessage('Obligatorio categoria'),
     check('type').notEmpty().withMessage('Obligatorio un Tipo'),
-    check('description').notEmpty().withMessage('Debe tener una Descripción')
+    check('description').notEmpty().isLength({min: 20}).withMessage('Descripción minima 20 caracteres')
 ];
 
 router.get('/', productsController.index);
@@ -40,9 +40,11 @@ router.post('/', upload.single('image'), validatorProducts, productsController.c
 
 router.get('/productDetail/:id', productsController.productDetail); 
 
+router.get('/carrito', productsController.productCarrito);
+
 
 router.get('/edit/:id', productsController.edit); 
-router.put('/edit/:id', productsController.update); 
+router.put('/edit/:id', validatorProducts, productsController.update); 
 
 
 

@@ -380,8 +380,104 @@ main h2{
     color: #006969;
     font-size: 7px;
 }
-
-
+.empresa {
+    background: url("../img/products/fondo.jpg");
+}
+.empresa_imagen {
+    display: flex;
+}
+.empresa_imagen img {
+   max-width: 30vw;
+   margin: 5px 10px;
+}
+.empresa h1 {
+    font-size: 8vw;
+    color: rgb(156, 87, 99);
+    text-align: center;
+    font-family: 'Fjalla One', sans-serif;
+}
+.empresa h2 {
+    font-size: 3vw;
+    color: black;
+    text-align: center;
+    font-family: 'Fjalla One', sans-serif;
+}
+#parrafo {
+    margin: 0 13px;
+    font-size: 1.5vw;
+    color: black;
+    text-align: justify;
+    font-family: 'Fjalla One', sans-serif;
+    
+}
+.empresa-conteiner {
+   display: flex;
+   text-align: center;
+}
+.empresa-conteiner i{
+    margin-top: 30px;
+    font-size: 7vw;
+    color: rgb(117, 38, 52);
+}
+.empresa_objetivos{
+    max-width: 33vw;
+}
+.empresa_objetivos h3{
+    margin-top: 20px;
+    font-size: 3.5vh;
+    color: rgb(117, 38, 52);
+    font-family: 'Fjalla One', sans-serif;
+}
+#loguito{
+    opacity: 0;
+    transition: all 0.5s;
+}
+#loguito:hover {
+    opacity: 1;
+}
+.contacto {
+    background: url('../img/products/contacto.jpg');
+}
+.contacto h2 {
+    color:  rgb(224, 17, 17);
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 3.5vh;
+    margin: 20px 0px 0px 35px;
+}
+.contacto_item{
+    display: flex;
+}
+.contacto_contenido i{
+    color: #ffffff;
+    font-size: 2.5vw;
+    margin: 0 10px;
+}
+.contacto_contenido h3{
+    color: #ffffff;
+    font-size: 1.5vw;
+    margin: 10px 0;
+}
+.contacto_contenido{
+    margin: 20px 0 0 35px;
+}
+.contacto_item img{
+   position: absolute;
+   margin: -50px 0 0 510px;
+   padding-bottom: 20px;
+}
+.noEncontre{
+    background: url('../img/products/noseencontro.jpg');
+}
+.encontro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.encontro h1{
+    font-family: 'Fjalla One', sans-serif;
+    color: #0e0b0b;
+    font-size: 3vw;
+}
 @media (max-width: 480px){
     .cant-prod1{
         display: none;
@@ -556,6 +652,75 @@ main h2{
         .form-agregarProd input{
             width: 70%;
             padding: 8px;
+        }
+        .empresa_imagen {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .empresa_imagen img {
+           max-width: 25vw;
+           margin: 5px 5px;
+        }
+        .empresa h2 {
+            font-size: 5vw;
+            color: black;
+            text-align: center;
+            font-family: 'Fjalla One', sans-serif;
+        }
+        .empresa p {
+            margin: 0 13px;
+            font-size: 1.5vw;
+            color: black;
+           
+            text-align: justify;
+            font-family: 'Fjalla One', sans-serif;
+            
+        }
+        .empresa-conteiner {
+           display: flex;
+           text-align: center;
+        }
+        .empresa-conteiner i{
+            margin-top: 30px;
+            font-size: 10vw;
+            color: rgb(117, 38, 52);
+        }
+        .empresa_objetivos{
+            max-width: 33vw;
+        }
+        .empresa_objetivos h3{
+            margin-top: 20px;
+            font-size: 1.5vh;
+            color: rgb(117, 38, 52);
+            font-family: 'Fjalla One', sans-serif;
+        }
+        #loguito{
+            opacity: 0;
+            transition: all 0.5s;
+        }
+        #loguito:hover {
+            opacity: 1;
+        }
+        .contacto_item{
+            display: flex;
+        }
+        .contacto_contenido i{
+            color: #ffffff;
+            font-size: 3.5vw;
+            margin: 5px 5px;
+        }
+        .contacto_contenido h3{
+            color: #ffffff;
+            font-size: 2.5vw;
+            margin: 10px 0;
+        }
+        .contacto_contenido{
+            margin: 20px 0 0 35px;
+        }
+        .contacto_item img{
+           position: absolute;
+           margin: 35px 0 0 0;
+          
         }
 }
 @media (min-width: 481px){
@@ -823,6 +988,73 @@ main h2{
         #contenedor-user-login h4,h5{
             color: #006969;
             font-size: 7px;
+        }
+        .empresa_imagen {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+        }
+        .empresa_imagen img {
+           max-width: 25vw;
+           margin: 5px 5px;
+        }
+        .empresa h2 {
+            font-size: 5vw;
+            color: black;
+            text-align: center;
+            font-family: 'Fjalla One', sans-serif;
+        }
+        .empresa p {
+            margin: 0 13px;
+            font-size: 2.5vw;
+            color: black;
+           
+            text-align: justify;
+            font-family: 'Fjalla One', sans-serif;
+            
+        }
+        .empresa-conteiner {
+           display: flex;
+           text-align: center;
+        }
+        .empresa-conteiner i{
+            margin-top: 30px;
+            font-size: 10vw;
+            color: rgb(117, 38, 52);
+        }
+        .empresa_objetivos{
+            max-width: 33vw;
+        }
+        .empresa_objetivos h3{
+            margin-top: 20px;
+            font-size: 1.5vh;
+            color: rgb(117, 38, 52);
+            font-family: 'Fjalla One', sans-serif;
+        }
+        #loguito{
+            opacity: 0;
+            transition: all 0.5s;
+        }
+        #loguito:hover {
+            opacity: 1;
+        }
+        .contacto_contenido i{
+            color: #ffffff;
+            font-size: 3.5vw;
+            margin: 5px 5px;
+        }
+        .contacto_contenido h3{
+            color: #ffffff;
+            font-size: 2.5vw;
+            margin: 10px 0;
+        }
+        .contacto_contenido{
+            margin: 20px 0 0 35px;
+        }
+        .contacto_item img{
+           position: absolute;
+           margin: 35px 0 0 0;
+          
         }
 }
 @media (min-width: 769px){
@@ -1145,5 +1377,87 @@ main h2{
         #contenedor-user-login h4,h5{
             color: #006969;
             font-size: 12px;
+        }.empresa h1 {
+            font-size: 7vw;
+            color: rgb(156, 87, 99);
+            text-align: center;
+            font-family: 'Fjalla One', sans-serif;
         }
+        .empresa_imagen {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+        .empresa_imagen img {
+           max-width: 40vw;
+           margin: 0px 25px 20px 16px;
+        }
+        .empresa h2 {
+            font-size: 3vw;
+            color: black;
+            text-align: center;
+            font-family: 'Fjalla One', sans-serif;
+        }
+        .empresa p {
+            margin: 0 13px;
+            font-size: 1.5vw;
+            color: black;
+           
+            text-align: justify;
+            font-family: 'Fjalla One', sans-serif;
+            
+        }
+        .empresa-conteiner {
+           display: flex;
+           text-align: center;
+        }
+        .empresa-conteiner i{
+            margin-top: 30px;
+            font-size: 7vw;
+            color: rgb(117, 38, 52);
+        }
+        .empresa_objetivos{
+            max-width: 33vw;
+        }
+        .empresa_objetivos h3{
+            margin-top: 20px;
+            font-size: 3.5vh;
+            color: rgb(117, 38, 52);
+            font-family: 'Fjalla One', sans-serif;
+        }
+        #loguito{
+            opacity: 0;
+            transition: all 0.5s;
+        }
+        #loguito:hover {
+            opacity: 1;
+        }
+        .contacto h2 {
+            color:  rgb(224, 17, 17);
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 3.5vh;
+            margin: 20px 0px 0px 35px;
+        }
+        .contacto_item{
+            display: flex;
+        }
+        .contacto_contenido i{
+            color: #ffffff;
+            font-size: 2.5vw;
+            margin: 0 10px;
+        }
+        .contacto_contenido h3{
+            color: #ffffff;
+            font-size: 1.5vw;
+            margin: 10px 0;
+        }
+        .contacto_contenido{
+            margin: 20px 0 0 35px;
+        }
+        .contacto_item img{
+           position: absolute;
+           margin: -50px 0 0 510px;
+           padding-bottom: 20px;
+        }
+        
     }

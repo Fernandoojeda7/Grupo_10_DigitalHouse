@@ -3,6 +3,16 @@
 <%- include('./partials/head')%>
 <body class="body-agregarProd">
     <main class="body-agregarProd">
+        <% if (typeof errors != 'undefined') { %>
+            <p style="color: rgb(240, 15, 15); font-family: 'Fjalla One', sans-serif; font-size: 1.5vw;">ERROR</p>
+            <ul>
+                <% for( let i = 0; i < errors.length; i++) { %>
+                <li>
+                    <%= errors[i].msg%>
+                </li>
+                <% } %>
+            </ul>
+        <% } %>
         <h1>FORMULARIO EDICIÓN DE PRODUCTO <%= Producto.name %> </h1>
         <div class="contenedor-agregarProd">
             <form action="/products/edit/<%= Producto.id %>?_method=PUT" method="POST" >
