@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html >
-    <%- include('./partials/head', {title: 'LOGIN TODO A PEDAL'}) %>
+    <%- include('./partials/head', {title: 'LOGIN PROVEEDOR'}) %>
 
 <body class="body-login">
     
-   <form action="/user/users" method="POST">
+   <form action="/proveedor/create" id="form" method="POST">
        <div class="contenedor-login">
            <div class="form-login">
             <label for="email">INGRESE SU E-MAIL</label>
-            <input type="email" name="email" placeholder="                       Correo Electronico" >
+            <input type="email" name="email" id="email" placeholder="                       Correo Electronico" >
            </div>
            <div class="form-login">
             <label for="contraseña">CONTREASEÑA</label>
-                <input type="password" name="contraseña"  >
+                <input type="password" id="contraseña" name="contraseña"  >
            </div>
            <div class="login-a">
             <input type="checkbox" name="recordame" value="Recordar">
             <label style="color: white;">Recordame</label>
-            <a href="/user/register">Quieres registrarte</a>
             </div>
             <div class="boton-form-login">
                <button type="submit">INGRESAR</button>
@@ -31,11 +30,12 @@
     <p style="color: black; font-family: 'Fjalla One', sans-serif; font-size: 1.5vw;">ERROR</p>
     <ul>
         <% for( let i = 0; i < errors.length; i++) { %>
-        <li style="color: red; font-family: 'Fjalla One', sans-serif; font-size: 1.2vw;">
+        <li  style="color: red; font-family: 'Fjalla One', sans-serif; font-size: 1.2vw;">
             <%= errors[i].msg%>
         </li>
         <% } %>
     </ul>
 <% } %>
+<script src="../js/loginUsuario.js"></script>
 </body>
 </html>

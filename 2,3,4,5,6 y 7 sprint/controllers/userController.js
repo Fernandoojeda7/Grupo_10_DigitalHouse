@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs')
 const { validationResult } = require('express-validator');
 const db = require('../database/models');
 const sequelize = db.sequelize;
-const { Op } = require("sequelize");
+
 
 const Productos = db.Producto;
 const Usuarios = db.Usuario;
@@ -30,9 +30,7 @@ const controller = {
 
 	registered: (req, res) => {
 		Usuarios.findAll()
-		.then((resultado)=> {
-
-			console.log(resultado)
+		.then(()=> {
 		})
 		const errors = validationResult(req);
 		if (errors.isEmpty()){
@@ -154,7 +152,7 @@ edit: function(req,res) {
         let usuarioId = req.params.id;
         Usuarios.destroy({where: {id: usuarioId}, force: true}) 
         .then(()=>{
-            return res.redirect('/user/usersDB')})
+            return res.redirect('/')})
         .catch(error => res.send(error)) 
     }
 

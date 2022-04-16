@@ -15,22 +15,22 @@
         <% } %>
         <h1>FORMULARIO CARGA DE PRODUCTO</h1>
         <div class="contenedor-agregarProd">
-            <form action="/products" method="POST" enctype="multipart/form-data">
+            <form action="/products" method="POST" id="form" enctype="multipart/form-data">
             <div class="form-agregarProd">
                 <label>Nombre del Producto</label>
-                <input type="text" name="name" value="<%= locals.old && old.name ? old.name : ''%>">
+                <input type="text" name="name" id="name" value="<%= locals.old && old.name ? old.name : ''%>">
             </div>
             <div class="form-agregarProd">
                 <label>Descuento</label>
-                <input type="number" name="discount" >
+                <input type="number" name="discount" id="discount">
             </div>
             <div class="form-agregarProd">
                 <label>Precio</label>
-                <input type="number" name="price" value="<%= locals.old && old.price ? old.price : ''%>">
+                <input type="number" name="price" id="price" value="<%= locals.old && old.price ? old.price : ''%>">
             </div>
             <div class="form-agregarProd">
                 <label>Categoría:</label>
-                <select name="category" value="<%= locals.old && old.category ? old.category : ''%>">
+                <select name="category" id="category" value="<%= locals.old && old.category ? old.category : ''%>">
                     <option value="Accesorio">Accesorios</option>
                     <option value="Bicicleta">Bicicletas</option>
                     <option value="Repuesto">Repuestos</option>
@@ -38,7 +38,7 @@
             </div>
             <div class="form-agregarProd">
                 <label>Tipo:</label>
-                <select name="type" value="<%= locals.old && old.type ? old.type : ''%>">
+                <select name="type" id="type" value="<%= locals.old && old.type ? old.type : ''%>">
                     <option value="promociones">Promociones</option>
                     <option value="novedades">Novedades</option>
                     <option value="ultimas-vistas">Ultimas vistas</option>
@@ -46,11 +46,11 @@
             </div>
             <div class="form-agregarProd">
                 <label>Descripción</label>
-                <textarea name="description" id="" cols="30" rows="10" value="<%= locals.old && old.description ? old.description : ''%>"></textarea>
+                <textarea name="description" id="description" cols="30" rows="10" value="<%= locals.old && old.description ? old.description : ''%>"></textarea>
             </div>
             <div class="form-agregarProd">
                 <label>Seleccionar Imagen</label>
-                <input type="file" name="image" accept=".jpg, .png, .jpeg, .gif" class="control-input" required>
+                <input type="file" name="image" accept=".jpg, .png, .jpeg, .gif" id="imagen" class="control-input" required>
             </div>
             <button type="submit"  class="boton-agregarProd">ENVIAR</button> 
             <a href="/products"><button type="button" class="boton-agregarProd">Ir Productos</button></a>
@@ -58,6 +58,7 @@
        
                  
         </div>
-    </main>    
+    </main>
+    <script src="../js/productoNuevo.js"></script>    
 </body>
 </html>

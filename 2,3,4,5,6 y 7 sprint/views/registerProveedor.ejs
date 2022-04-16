@@ -15,34 +15,34 @@
                 <% } %>
             </ul>
         <% } %>
-        <form action="/proveedor/registerProveedor" method="POST"  class="style-form" >
+        <form action="/proveedor/registerProveedor" method="POST" id="form"  class="style-form" >
             <div class="control-form">   
-                <input type="text" name="nombre" placeholder="NOMBRE" class="control-input" value="<%= locals.old && old.nombre ? old.nombre : ''%>" />
+                <input type="text" name="nombre" placeholder="NOMBRE" id="nombre" class="control-input" value="<%= locals.old && old.nombre ? old.nombre : ''%>" />
             </div>
             <br>
             <div class="control-form">
-              <input type="text" name="apellido" placeholder="APELLIDO" class="control-input" value="<%= locals.old && old.apellido ? old.apellido : ''%>" />
+              <input type="text" name="apellido" placeholder="APELLIDO" id="apellido"  class="control-input" value="<%= locals.old && old.apellido ? old.apellido : ''%>" />
             </div>
             <br>
             <div class="control-form">
-                <input type="number" name="documento" placeholder="DOCUMENTO" class="control-input" value="<%= locals.old && old.documento ? old.documento : ''%>" />
+                <input type="number" name="documento" placeholder="DOCUMENTO" id="documento" class="control-input" value="<%= locals.old && old.documento ? old.documento : ''%>" />
             </div>
             <br>
             <div class="control-form">
-                <input type="text" name="direccion" placeholder="DIRECCIÓN" class="control-input" value="<%= locals.old && old.direccion ? old.direccion : ''%>" />
+                <input type="text" name="direccion" placeholder="DIRECCIÓN" id="direccion" class="control-input" value="<%= locals.old && old.direccion ? old.direccion : ''%>" />
             </div>
             <br>
             <div class="control-form">
-                <input type="email" name="email" placeholder="CORREL ELECTRONICO"   class="control-input" value="<%= locals.old && old.email ? old.email : ''%>" >
+                <input type="email" name="email" placeholder="CORREL ELECTRONICO" id="direccion"  class="control-input" value="<%= locals.old && old.email ? old.email : ''%>" >
             </div>
             <br>
             <div class="control-form">
-                <input type="password" placeholder="CONTRASEÑA" name="contraseña" class="control-input" >
+                <input type="password" placeholder="CONTRASEÑA" name="contraseña" id="contraseña" class="control-input" >
             </div>
                 <a href=""><button type="submit" class="boton-form">REGISTRARSE</button></a>
         </form>
        
     </main>
-   
+   <script src="../js/registroUsuario.js"></script>
 </body>
 </html>

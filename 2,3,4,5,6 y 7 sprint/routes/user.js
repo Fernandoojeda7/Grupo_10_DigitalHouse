@@ -24,11 +24,7 @@ const validatorRegistered = [
     check('apellido').notEmpty().isLength({min: 2}).withMessage('Obligatorio Apellido'),
     check('documento').notEmpty().withMessage('Obligatorio Numero DNI'),
     check('direccion').notEmpty().withMessage('Obligatorio Dirección'),
-    check('email').isEmail().withMessage('Email debe ser valido').custom(email => {
-        if (yaEstaRegistrado(email)) {
-          throw new Error('El Email ya se encuentra Registrado')
-        }
-      }),
+    check('email').isEmail().withMessage('Email debe ser valido'),
     check('fecha_nacimiento').notEmpty().withMessage('Obligatorio Fecha Nacimiento'),
     check('contraseña').isLength({min: 4}).withMessage('Debe contener 4 caracteres')
 ];

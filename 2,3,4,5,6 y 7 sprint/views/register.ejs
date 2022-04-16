@@ -14,34 +14,34 @@
                 <% } %>
             </ul>
         <% } %>
-        <form action="/user/register" method="POST"  class="style-form" enctype="multipart/form-data">
+        <form action="/user/register" method="POST" id="form" class="style-form" enctype="multipart/form-data">
             <div class="control-form">
                 <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" class="control-input" value="<%= locals.old && old.nombre ? old.nombre : ''%>" />
+                <input type="text" name="nombre" class="control-input" id="nombre" value="<%= locals.old && old.nombre ? old.nombre : ''%>" />
             </div>
             <div class="control-form">
                 <label for="apellido">Apellido</label>
-                <input type="text" name="apellido" class="control-input" value="<%= locals.old && old.apellido ? old.apellido : ''%>" />
+                <input type="text" name="apellido" class="control-input" id="apellido" value="<%= locals.old && old.apellido ? old.apellido : ''%>" />
             </div>
             <div class="control-form">
                 <label for="documento">Documento Nº</label>
-                <input type="number" name="documento" class="control-input" value="<%= locals.old && old.documento ? old.documento : ''%>" />
+                <input type="number" name="documento" class="control-input" id="documento" value="<%= locals.old && old.documento ? old.documento : ''%>" />
             </div>
             <div class="control-form">
                 <label for="direccion">Dirección</label>
-                <input type="text" name="direccion" class="control-input" value="<%= locals.old && old.direccion ? old.direccion : ''%>" />
+                <input type="text" name="direccion" class="control-input" id="direccion" value="<%= locals.old && old.direccion ? old.direccion : ''%>" />
             </div>
             <div class="control-form">
                 <label for="email">Correo Electronico</label>
-                <input type="email" name="email" placeholder="correo electronico"   class="control-input" value="<%= locals.old && old.email ? old.email : ''%>" >
+                <input type="email" name="email" placeholder="correo electronico" id="email"  class="control-input" value="<%= locals.old && old.email ? old.email : ''%>" >
             </div>
             <div class="control-form">
                 <label for="fecha">Fecha de Nacimiento</label>
-                <input type="date" name="fecha_nacimiento" class="control-input" value="<%= locals.old && old.fecha ? old.fecha : ''%>" >
+                <input type="date" name="fecha_nacimiento" class="control-input" id="nacimiento" value="<%= locals.old && old.fecha ? old.fecha : ''%>" >
             </div>
             <div class="control-form">
                 <label>Imagen de Perfil</label>
-                <input type="file" name="image" accept=".jpg, .png, .jpeg, .gif" class="control-input" required> 
+                <input type="file" name="image" accept=".jpg, .png, .jpeg, .gif" id="imagen" class="control-input" required> 
             </div> 
             <div class="control-form">
                 <label>Contraseña</label>
@@ -50,6 +50,6 @@
                 <a href=""><button type="submit" class="boton-form">REGISTRARSE</button></a>
         </form>
     </main>
-    
+    <script src="../js/registroUsuario.js"></script>
 </body>
 </html>
