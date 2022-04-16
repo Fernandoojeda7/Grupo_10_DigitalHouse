@@ -18,4 +18,9 @@ Este no fue como los Sprint pasados, lamentablemente Giuliana no pudo continuar 
 
 RETRO SPRINT 6
 
-Me he quedado solo con el proyecto, otro compañero abandono, pero a seguir con las mismas actitud del comienzo y poniendo más empeño aun. Seguir realizando los sprint como los anteriores y no dejar pasar mucho tiempo entre consigna y consigna.  
+Me he quedado solo con el proyecto, otro compañero abandono, pero a seguir con las mismas actitud del comienzo y poniendo más empeño aun. Seguir realizando los sprint como los anteriores y no dejar pasar mucho tiempo entre consigna y consigna. 
+
+RETRO SPRINT 7
+
+Avanzando, siempre hacia adelante. auque este sprint lo comence un poco tarde, lo cual no pasara con el Sprint 8 ya que a mi parecer es el mas complicado y extenso. 
+
