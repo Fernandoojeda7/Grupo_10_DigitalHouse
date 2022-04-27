@@ -32,7 +32,15 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
         },
         image: {
-            type: dataTypes.BLOB,
+            type: dataTypes.STRING,
+        //     get() { 
+        //         if (this.getDataValue('image')){
+        //         return config.aws.url + this.getDataValue('image');
+        //     }else {
+        //         return config.aws.url + '/public/img/users/default.jpg';
+        //     }
+            
+        // },
             allowNull: false
         },
         contraseña: {

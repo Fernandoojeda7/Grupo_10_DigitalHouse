@@ -56,7 +56,7 @@ const controller = {
     			category: req.body.category,
     			type: req.body.type,
     			description: req.body.description,
-				image: req.file.filename
+				image: `/img/products/${req.file.filename}`
 			}
 		) 
 		.then(()=> {
@@ -105,26 +105,19 @@ const controller = {
     },
 
 	search: (req, res) =>{
-		let busqueda = req.query.search;
-		busqueda = busqueda.toLowerCase();
-		let resultados = [];
-		Productos.findAll()
-		.then((productos) =>{ 
-		for(let producto of productos){
-			let nombre = producto.name.toLowerCase();
-			if(nombre.indexOf(busqueda) != -1){
-				resultados.push(producto);
-				console.log(resultados);
-				res.render('productoBuscado', { Productos: productos, resultados: resultados }) 
+		Productos.findAll({
+			where: {
+				name: {[Op.like]: '%' + req.query.search + '%'}
+			}
+		}).then(productos => {
+			if(productos.length > 0){
+			return res.render('productoBuscado', { Productos: productos })
 			} else {
 				return res.render('noEncontre')
 			}
-			
-			} 
-				
-		
 		})
-	}
+			}
 };
 
 module.exports = controller;
+

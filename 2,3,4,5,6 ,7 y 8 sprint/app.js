@@ -9,6 +9,8 @@ const mainRouter = require('./routes/main');
 const productsRouter = require('./routes/products');
 const userRouter = require('./routes/user');
 const provRouter = require('./routes/proveedor');
+const apiUserRouter = require('./routes/api/userRoutes')
+const apiProductRouter = require('./routes/api/productRouter')
 
 const logMiddleware = require('./middlewares/logMiddleware');
 const recordMiddleware = require('./middlewares/recordMiddleware');
@@ -34,7 +36,8 @@ app.use('/', mainRouter);
 app.use('/products', productsRouter);
 app.use('/user', userRouter);
 app.use('/proveedor', provRouter);
-
+app.use('/api', apiUserRouter);
+app.use('/api', apiProductRouter);
 
 
 

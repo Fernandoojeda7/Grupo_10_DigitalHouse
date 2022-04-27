@@ -34,6 +34,7 @@ const controller = {
 		})
 		const errors = validationResult(req);
 		if (errors.isEmpty()){
+			console.log(req.file);
 			Usuarios.create(
 				{
 					nombre: req.body.nombre,
@@ -43,7 +44,7 @@ const controller = {
 					fecha_nacimiento: req.body.fecha_nacimiento,
 					direccion: req.body.direccion,
 					contraseña: bcrypt.hashSync(req.body.contraseña, 10),
-					image: req.file.filename,
+					image: `/img/users/${req.file.filename}`,
 					producto_id: req.body.producto_id
 
 				}
