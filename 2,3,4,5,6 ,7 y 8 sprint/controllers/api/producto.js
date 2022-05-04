@@ -23,18 +23,19 @@ const controller = {
             distinct: 'id' 
         });
 
-        let allProducts = await totalProductos.map(producto => ({
+        let allProductos = await totalProductos.map(producto => ({
             id: producto.id,
             nombre: producto.name,
             descripcion:producto.description,
+            imagen: 'http://localhost:3030/img/products' + '/' + producto.image,
             detail: req.originalUrl + '/' + producto.id
             }))
 
         return res.json({
             total: generalCount,
-            individuals: individualesCount,
+            individuales: individualesCount,
             array: productosAProveedor,
-            products: allProducts
+            productos: allProductos
             })
     },
     
