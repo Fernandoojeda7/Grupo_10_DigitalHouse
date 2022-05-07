@@ -22,5 +22,9 @@ Me he quedado solo con el proyecto, otro compañero abandono, pero a seguir con 
 
 RETRO SPRINT 7
 
-Avanzando, siempre hacia adelante. auque este sprint lo comence un poco tarde, lo cual no pasara con el Sprint 8 ya que a mi parecer es el mas complicado y extenso. 
+Avanzando, siempre hacia adelante. auque este sprint lo comence un poco tarde, lo cual no pasara con el Sprint 8 ya que a mi parecer es el mas complicado y extenso.
+
+RETRO SPRINT 8
+
+Llegué al final del recorrido, pero al comienzo de un mundo totalmente nuevo. Fueron muchas horas, dedicación, organización y desafíos constantes, por supuesto que la frustración se hizo presente en muchas ocasiones, pero siempre con la mente puesta en la meta. En esta retro también quiero agradecer a mis profesores Erik y Nacho, excelentes docentes y tutores.
 
