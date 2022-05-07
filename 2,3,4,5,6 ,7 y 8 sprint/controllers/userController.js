@@ -86,7 +86,7 @@ const controller = {
 				 })
 				 
 				 if (req.body.recordame != undefined) {
-					 res.cookie('recordame', usuarioALoguearse.email, {maxAge: 20000 })
+					 res.cookie('recordame', usuarioALoguearse.email, {maxAge: 200000 })
 				 }}).catch(error => res.send(error))
 	},
 

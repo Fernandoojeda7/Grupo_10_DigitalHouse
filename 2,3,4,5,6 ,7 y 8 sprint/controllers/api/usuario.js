@@ -15,6 +15,7 @@ const controller= {
                     id: usuario.id,
                     nombre: usuario.nombre,
                     email:usuario.email,
+                    Imagen: 'http://localhost:3030/img/users' + '/' + usuario.image,
                     detail: req.originalUrl + '/' + usuario.id
                 }))
             }

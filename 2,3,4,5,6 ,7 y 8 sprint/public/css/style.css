@@ -151,7 +151,10 @@ footer{
     padding: 8px;
 }
 main h2{
-    margin: 0 0 5px 0;
+    margin: 0 0 10px 0;
+}
+#p1 {
+    margin: 0 0 18px 0;
 }
 .h4-h5{
     display: flex;
@@ -429,11 +432,13 @@ main h2{
     font-family: 'Fjalla One', sans-serif;
 }
 #loguito{
+    
     opacity: 0;
     transition: all 0.5s;
 }
 #loguito:hover {
     opacity: 1;
+    margin: 0 0 10px 0;
 }
 .contacto {
     background: url('../img/products/contacto.jpg');
@@ -493,6 +498,9 @@ main h2{
         text-align: center;
         margin: auto;
         margin-top: 10px;
+        }
+        .burger{
+            opacity: 0;
         }
         .logo-nombre{
             display: none;

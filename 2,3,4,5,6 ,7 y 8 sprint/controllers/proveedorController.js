@@ -79,7 +79,7 @@ const controller = {
 			 res.render('addProduct');
 
 			 if (req.body.recordame != undefined) {
-				res.cookie('recordame', provALogin.email, {maxAge: 20000 })
+				res.cookie('recordame', provALogin.email, {maxAge: 200000 })
 			 }})
 			 .catch(error => res.send(error))
 	}

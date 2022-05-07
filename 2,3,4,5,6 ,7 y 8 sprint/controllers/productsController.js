@@ -56,7 +56,7 @@ const controller = {
     			category: req.body.category,
     			type: req.body.type,
     			description: req.body.description,
-				image: `/img/products/${req.file.filename}`
+				image: req.file.filename
 			}
 		) 
 		.then(()=> {

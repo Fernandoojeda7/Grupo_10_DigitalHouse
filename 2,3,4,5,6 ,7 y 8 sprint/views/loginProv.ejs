@@ -3,7 +3,16 @@
     <%- include('./partials/head', {title: 'LOGIN PROVEEDOR'}) %>
 
 <body class="body-login">
-    
+    <% if (typeof errors != 'undefined') { %>
+        <p style="color: black; font-family: 'Fjalla One', sans-serif; font-size: 1.5vw;">ERROR</p>
+        <ul>
+            <% for( let i = 0; i < errors.length; i++) { %>
+            <li  style="color: red; font-family: 'Fjalla One', sans-serif; font-size: 1.5vw;">
+                <%= errors[i].msg%>
+            </li>
+            <% } %>
+        </ul>
+    <% } %>
    <form action="/proveedor/create" id="form" method="POST">
        <div class="contenedor-login">
            <div class="form-login">
@@ -15,27 +24,15 @@
                 <input type="password" id="contraseña" name="contraseña"  >
            </div>
            <div class="login-a">
-            <input type="checkbox" name="recordame" value="Recordar">
+            <!-- <input type="checkbox" name="recordame" value="Recordar">
             <label style="color: white;">Recordame</label>
-            </div>
+            </div> -->
             <div class="boton-form-login">
                <button type="submit">INGRESAR</button>
             </div>
        </div>
    </form>
-   <br>
-   <br>
-   <br>
-   <% if (typeof errors != 'undefined') { %>
-    <p style="color: black; font-family: 'Fjalla One', sans-serif; font-size: 1.5vw;">ERROR</p>
-    <ul>
-        <% for( let i = 0; i < errors.length; i++) { %>
-        <li  style="color: red; font-family: 'Fjalla One', sans-serif; font-size: 1.2vw;">
-            <%= errors[i].msg%>
-        </li>
-        <% } %>
-    </ul>
-<% } %>
+   
 <script src="../js/loginUsuario.js"></script>
 </body>
 </html>

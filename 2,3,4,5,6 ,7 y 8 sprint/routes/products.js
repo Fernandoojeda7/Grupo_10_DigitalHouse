@@ -28,12 +28,12 @@ const validatorProducts = [
     check('description').notEmpty().isLength({min: 20}).withMessage('Descripción minima 20 caracteres')
 ];
 
-router.get('/', productsController.index);
+router.get('/', authMiddleware, productsController.index);
 
 router.get('/search', productsController.search) 
 
 
-router.get('/create', productsController.add); 
+router.get('/create',authMiddleware, productsController.add); 
 router.post('/', upload.single('image'), validatorProducts, productsController.create); 
 
 

@@ -3,7 +3,16 @@
     <%- include('./partials/head', {title: 'LOGIN TODO A PEDAL'}) %>
 
 <body class="body-login">
-    
+    <% if (typeof errors != 'undefined') { %>
+        <p style="color: black; font-family: 'Fjalla One', sans-serif; font-size: 1.5vw;">ERROR</p>
+        <ul>
+            <% for( let i = 0; i < errors.length; i++) { %>
+            <li style="color: red; font-family: 'Fjalla One', sans-serif; font-size: 1.5vw;">
+                <%= errors[i].msg%>
+            </li>
+            <% } %>
+        </ul>
+    <% } %>
    <form action="/user/users" id="form" method="POST">
        <div class="contenedor-login">
            <div class="form-login">
@@ -24,19 +33,6 @@
             </div>
        </div>
    </form>
-   <br>
-   <br>
-   <br>
-   <% if (typeof errors != 'undefined') { %>
-    <p style="color: black; font-family: 'Fjalla One', sans-serif; font-size: 1.5vw;">ERROR</p>
-    <ul>
-        <% for( let i = 0; i < errors.length; i++) { %>
-        <li style="color: red; font-family: 'Fjalla One', sans-serif; font-size: 1.2vw;">
-            <%= errors[i].msg%>
-        </li>
-        <% } %>
-    </ul>
-<% } %>
 <script src="../js/loginUsuario.js"></script>
 </body>
 </html>
