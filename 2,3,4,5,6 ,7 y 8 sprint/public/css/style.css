@@ -558,8 +558,9 @@ main h2{
             padding: 0 10px;
         }
         .main-index h1, h2{
-           color: #df9a34;
+           color: #0a0a09;
            margin: 15px 0;
+           font-weight: bold;
         }
         footer{
             padding: 10px;
@@ -781,8 +782,9 @@ main h2{
             padding: 0 10px;
         }
         .main-index h1, h2{
-            color: #df9a34;
+            color: #242321;
             margin: 15px 0;
+            font-weight: bold;
         }
         footer{
             padding: 10px;
@@ -1117,8 +1119,9 @@ main h2{
             padding: 0 5px;
         }
         .main-index h1, h2{
-            color: #df9a34;
+            color: #1d1c1b;
             margin: 5px 0 22px 0;
+            font-weight: bold;
         }
         footer{
             padding: 10px;

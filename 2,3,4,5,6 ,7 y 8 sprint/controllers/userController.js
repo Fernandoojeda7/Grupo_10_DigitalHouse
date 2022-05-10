@@ -44,7 +44,7 @@ const controller = {
 					fecha_nacimiento: req.body.fecha_nacimiento,
 					direccion: req.body.direccion,
 					contraseña: bcrypt.hashSync(req.body.contraseña, 10),
-					image: `/img/users/${req.file.filename}`,
+					image: req.file.filename,
 					producto_id: req.body.producto_id
 
 				}
